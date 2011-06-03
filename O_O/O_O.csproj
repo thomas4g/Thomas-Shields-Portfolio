@@ -73,6 +73,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\blog.css" />
+    <Content Include="Content\Images\calendar.png" />
+    <Content Include="Content\Images\code.png" />
+    <Content Include="Content\Images\comments.png" />
+    <Content Include="Content\Images\design.png" />
+    <Content Include="Content\Images\theology.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -143,7 +149,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
