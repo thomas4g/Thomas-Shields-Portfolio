@@ -1,0 +1,56 @@
+﻿section {
+	margin:30px;
+}
+section.blogPost article {
+	float:left;
+	width:805px;
+	margin-right:15px;
+}
+section h2 {
+	font-size:45px;
+	text-shadow: #999 0 0 2px;
+	display:block;
+	margin-top:0;
+	margin-bottom:5px;
+}
+.sidebar {
+	padding-top:20px;
+	float:left;
+	width:100px;
+}
+.sidebar .postDate {
+text-shadow: #fff 0 0 .04em;
+	width:50px;
+	height:50px;
+	background-image: url('../Content/Images/calendar.png');
+	background-repeat:no-repeat;
+	font-size:30px;
+	color:white;
+	text-align:center;
+	margin-bottom:4px;
+}
+.sidebar .postDate span  {
+padding-top:3.9px;
+	display:block;
+}
+.sidebar .postDate .month {
+	font-size:12px;
+	margin-top:-10px;
+	text-shadow: #fff 0 0 .03em;
+padding-top:0;
+}
+.sidebar .comments {
+	width:50px;
+	height:40px;
+	color:#222;
+	text-shadow:#222 0 0 1px;
+	text-align:center;
+	padding-top:10px;
+	font-weight:bold;
+	background-image: url("../Content/images/comments.png");
+	background-repeat:no-repeat;
+	font-size:20px;
+}
+.sidebar img {
+	width:50px;
+}

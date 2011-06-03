@@ -1,0 +1,26 @@
+﻿@model IEnumerable<O_O.Models.post>
+
+@{
+	ViewBag.Title = "Blog";
+    string[] months = {"January","February","March","April","May","June","July","August","September","October","November","December"};
+
+}
+
+<h3>Blog</h3>
+
+@foreach (var item in Model)
+{
+		<section class="blogPost">
+		<div class="sidebar">
+			<div class="postDate"><span>@item._pubdate.Day</span><span class="month">@(months[item._pubdate.Month-1])</span></div>
+			<div class="comments"><span>@item._comments</span></div>
+			<img class="tag" src=@(Url.Content("~/Content/images/" + item._tag + ".png")) title="This post is about @(item._tag)">
+		</div>
+		<article>
+			<h2>@item._title</h2>
+			@item._content
+		</article>
+	</section>
+	<div style="clear:both"></div>
+}
+
