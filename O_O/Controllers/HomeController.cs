@@ -19,5 +19,9 @@ namespace O_O.Controllers
         {
             return View();
         }
+        public ViewResult NotFound()
+        {
+            return View("404");
+        }
     }
 }

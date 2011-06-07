@@ -51,6 +51,70 @@ padding-top:0;
 	background-repeat:no-repeat;
 	font-size:20px;
 }
+.sidebar .comments a { color: #222 }
 .sidebar img {
 	width:50px;
 }
+#comments 
+{
+    margin-left:80px;
+    margin-top:40px;
+}
+#comments .author 
+{
+    float:left;
+}
+#comments .content 
+{
+    float:left;
+    width:auto;
+    max-width:450px;
+
+}
+#comments .quotes
+{
+    margin-top:-10px;
+    font-size:40px;
+    vertical-align:top;
+    float:left;
+    margin-left:10px;
+}
+#comments .text 
+{
+    float:left;
+}
+#comments .closing 
+{
+    float:right;
+}
+#comments .authorSpan
+{
+        color: #CC3300;
+}
+.addComment {margin: 0 40px; text-align:left;}
+.comment-container 
+{
+ margin:20px 130px 0 0;
+ border-bottom:1px dotted #ccc;   
+}
+#icons 
+{
+    top:10px;
+    right:20px;
+    text-align:right;
+    position:absolute;
+}
+.clickit{ width:50px; cursor:pointer; margin-bottom:10px;}
+#icons input { width:200px;}
+#icons div 
+{
+     display:none; 
+     border-radius:5px;
+     text-align:center;
+}
+#icons .dropdown 
+{
+     background-color:#eee; 
+     padding: 5px 5px 10px 5px;
+}
+

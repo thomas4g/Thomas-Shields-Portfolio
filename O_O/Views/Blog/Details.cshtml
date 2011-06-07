@@ -1,0 +1,33 @@
+﻿@model O_O.Models.post
+
+@{
+    O_O.Models.comment com = new O_O.Models.comment();
+    com.post = Model.id;
+    ViewBag.Title = "Details";
+}
+
+@Html.Partial("Post", Model)
+<div id="comments">
+@foreach (var item in Model.comments)
+{
+    <div class="comment-container">
+        <div class="author"><span class="authorSpan">
+        @if (item.website != null)
+        {
+            <a href="http://@item.website.Replace("https://","").Replace("http://","")">
+                    @item.author
+            </a>
+        }
+        else { 
+                            @item.author
+        }
+        </span> said </div><div class="quotes">“</div><div class="content"><div class="text">@item.content</div><div class="quotes closing">”</div></div>
+        <div style="clear:both"></div>
+    </div>
+}
+</div>
+<div class="addComment">
+@Html.Partial("~/Views/Comments/Create.cshtml", com)
+</div>
+
+

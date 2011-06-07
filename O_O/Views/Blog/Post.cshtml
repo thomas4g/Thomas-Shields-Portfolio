@@ -1,0 +1,23 @@
+﻿@model O_O.Models.post
+@{
+    string[] months = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
+}
+<section class="blogPost">
+        <div class="sidebar">
+            <div class="postDate"><span>@Model.date.Day</span><span class="month">@(months[Model.date.Month - 1])</span></div>
+            <div class="comments"><span><a href="@(Url.Action("Details",new {id=Model.id}))#comments">
+            @if(Model.comments != null) {
+                <text>@(Model.comments.Count)</text>
+                }
+                else {
+                    <text>0</text>
+                }
+            </a></span></div>
+            <a href="@Url.Action("Tag",new {id=Model.tag })"><img class="tag" src=@(Url.Content("~/Content/images/" + Model.tag + ".png")) title="This post is about @(Model.tag)"></a>
+        </div>
+        <article>
+            <h2>@(Html.ActionLink(Model.title,"Details",new {id = Model.id}))</h2>
+            @Html.Raw(Model.content)
+        </article>
+</section>
+<div style="clear:both"></div>

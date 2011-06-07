@@ -1,26 +1,31 @@
 ﻿@model IEnumerable<O_O.Models.post>
 
 @{
-	ViewBag.Title = "Blog";
-    string[] months = {"January","February","March","April","May","June","July","August","September","October","November","December"};
-
+    ViewBag.Title = "Blog";
 }
 
 <h3>Blog</h3>
+<div id="icons">
+    <img class="clickit" alt="rss" title="Rss Feed URL" src="@Url.Content("~/Content/Images/rss.gif")" />
+    <div class="dropdown">
+        Copy the URL below into your RSS reader <br />
+        <input value="http://@Request.Url.Host/Blog/RSS" />
+    </div>
+    <br />
+    <img class="clickit" src="@Url.Content("~/Content/Images/so.png")" alt="Stack Overflow Logo" title="View My Stack Overflow Profile" />
+    <div>
+        <a href="http://stackoverflow.com/users/719312/thomas-shields">
+            <img src="http://stackoverflow.com/users/flair/719312.png" width="208" height="58" alt="profile for Thomas Shields at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Thomas Shields at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+        </a>
+    </div>
+</div>
 
 @foreach (var item in Model)
 {
-		<section class="blogPost">
-		<div class="sidebar">
-			<div class="postDate"><span>@item._pubdate.Day</span><span class="month">@(months[item._pubdate.Month-1])</span></div>
-			<div class="comments"><span>@item._comments</span></div>
-			<img class="tag" src=@(Url.Content("~/Content/images/" + item._tag + ".png")) title="This post is about @(item._tag)">
-		</div>
-		<article>
-			<h2>@item._title</h2>
-			@item._content
-		</article>
-	</section>
-	<div style="clear:both"></div>
+        @Html.Partial("Post", item);
 }
-
+<script type="text/javascript">
+    $(".clickit").click(function () {
+            $(this).next().slideToggle("fast");
+    });
+</script>
