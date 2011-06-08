@@ -8,6 +8,7 @@ namespace O_O.Models
 {
     public class post
     {
+        
         public int id {get; set;}
         [Required]
         public string title { get; set; }

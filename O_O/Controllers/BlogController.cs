@@ -17,6 +17,7 @@ namespace O_O.Controllers
         // GET: /Blog/
         public ViewResult Index()
         {
+            Database.SetInitializer<PostContext>(null);
             var _posts = (from p in db.posts
                           orderby p.id descending
                         select new { p.id, p.title, p.content, p.date, p.tag, comments = (from c in db.comments where c.post == p.id select c) });
