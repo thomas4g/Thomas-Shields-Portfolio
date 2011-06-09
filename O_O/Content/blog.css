@@ -12,11 +12,12 @@ section h2 {
 	display:block;
 	margin-top:0;
 	margin-bottom:5px;
+	margin-left:10px;
 }
 .sidebar {
-	padding-top:20px;
+	padding-top:60px;
 	float:left;
-	width:100px;
+	margin-right:20px;
 }
 .sidebar .postDate {
 text-shadow: #fff 0 0 .04em;

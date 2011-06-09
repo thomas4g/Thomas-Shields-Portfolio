@@ -3,6 +3,10 @@
     margin:0;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;	
 }
+p 
+{
+    text-indent:1px;
+}
 a {
     color: #CC3300;
     text-decoration:none;
@@ -41,7 +45,7 @@ h2 a
 {
     color:#999;
 }
-h2, h3, h4, nav {
+h2, h3, nav {
         font-family:"Courier New", Courier, monospace;
     }
 h3 {
@@ -52,11 +56,12 @@ h3 {
 }
 h4 
 {
-    text-shadow: #999 0 0 .05em;
-    font-size:20px;
+    text-shadow: #999 0 0 .04em;
+    font-size:30px;
     font-weight:normal;
-
+    margin:5px 0 5px 30px;
 }
+
 img { border:none;}
 .brackets {
     font-size:60px;

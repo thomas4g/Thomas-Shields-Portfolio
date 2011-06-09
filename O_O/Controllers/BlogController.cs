@@ -19,7 +19,7 @@ namespace O_O.Controllers
         {
             Database.SetInitializer<PostContext>(null);
             var _posts = (from p in db.posts
-                          orderby p.id descending
+                          orderby p.date descending
                         select new { p.id, p.title, p.content, p.date, p.tag, comments = (from c in db.comments where c.post == p.id select c) });
             var posts = new List<post>();
             foreach (var item in _posts)
@@ -37,7 +37,7 @@ namespace O_O.Controllers
 
             var _posts = (from p in db.posts
                           where p.tag.ToLower() == id.ToLower()
-                          orderby p.id descending
+                          orderby p.date descending
                           select new { p.id, p.title, p.content, p.date, p.tag, comments = (from c in db.comments where c.post == p.id select c) });
             if (_posts == null) return RedirectToAction("Index");
             var posts = new List<post>();
@@ -50,7 +50,7 @@ namespace O_O.Controllers
         public ViewResult Rss()
         {
             var _posts = (from p in db.posts
-                          orderby p.id descending
+                          orderby p.date descending
                           select new { p.id, p.title, p.content, p.date, p.tag, comments = (from c in db.comments where c.post == p.id select c) });
             var posts = new List<post>();
             foreach (var item in _posts)
