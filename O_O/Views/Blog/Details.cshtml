@@ -3,7 +3,7 @@
 @{
     O_O.Models.comment com = new O_O.Models.comment();
     com.post = Model.id;
-    ViewBag.Title = "Details";
+    ViewBag.Title = Model.title;
 }
 
 @Html.Partial("Post", Model)

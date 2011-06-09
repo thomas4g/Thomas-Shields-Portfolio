@@ -23,8 +23,8 @@
 <div style="clear:both"></div>
 @if (Request.IsAuthenticated) { 
     <div style="margin-left:30px">
-@Html.ActionLink("Edit","Edit","Blog")
+@Html.ActionLink("Edit", "Edit", "Blog", new { id = Model.id })
 <br />
-@Html.ActionLink("Delete", "Delete", "Blog")
+@Html.ActionLink("Delete", "Delete", "Blog", new { id = Model.id })
 </div>
 }
