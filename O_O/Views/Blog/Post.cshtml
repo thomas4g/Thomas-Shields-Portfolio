@@ -21,3 +21,7 @@
         </article>
 </section>
 <div style="clear:both"></div>
+@if (Request.IsAuthenticated) { 
+@Html.ActionLink("Edit","Edit","Blog")
+@Html.ActionLink("Delete", "Delete", "Blog")
+}
