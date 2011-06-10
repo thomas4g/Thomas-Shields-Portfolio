@@ -117,6 +117,7 @@
     <Content Include="Content\Images\code.png" />
     <Content Include="Content\Images\comments.png" />
     <Content Include="Content\Images\design.png" />
+    <Content Include="Content\Images\info.png" />
     <Content Include="Content\Images\me.png" />
     <Content Include="Content\Images\rss-icon.gif" />
     <Content Include="Content\Images\rss.gif" />
