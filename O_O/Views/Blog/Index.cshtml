@@ -5,13 +5,33 @@
 }
 
 <h3>Blog</h3>
-<div id="icons">
+
+<ul id="icons">
+    <li>
+        <img class="clickit" alt="rss" title="Rss Feed URL" src="@Url.Content("~/Content/Images/rss.gif")" />
+        <div class="dropdown rss">
+            Copy the URL below into your RSS reader <br />
+            <input value="http://@Request.Url.Host/Blog/RSS" />
+        </div>
+    </li>
+    <li>
+        <img class="clickit" src="@Url.Content("~/Content/Images/so.png")" alt="Stack Overflow Logo" title="View My Stack Overflow Profile" />
+        <div class="dropdown">
+            <a href="http://stackoverflow.com/users/719312/thomas-shields">
+                <img src="http://stackoverflow.com/users/flair/719312.png" width="208" height="58" alt="profile for Thomas Shields at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Thomas Shields at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+            </a>
+        </div>
+    </li>
+</ul>
+@*<div id="icons">
+<div class="icon">
     <img class="clickit" alt="rss" title="Rss Feed URL" src="@Url.Content("~/Content/Images/rss.gif")" />
     <div class="dropdown">
         Copy the URL below into your RSS reader <br />
         <input value="http://@Request.Url.Host/Blog/RSS" />
     </div>
-    <br />
+</div>
+<div class="icon">
     <img class="clickit" src="@Url.Content("~/Content/Images/so.png")" alt="Stack Overflow Logo" title="View My Stack Overflow Profile" />
     <div>
         <a href="http://stackoverflow.com/users/719312/thomas-shields">
@@ -19,13 +39,17 @@
         </a>
     </div>
 </div>
-
+</div>
+*@
 @foreach (var item in Model)
 {
         @Html.Partial("Post", item);
 }
 <script type="text/javascript">
     $(".clickit").click(function () {
-            $(this).next().slideToggle("fast");
+        var guyToToggle = $(this).next();
+        guyToToggle.slideToggle("fast");
+        $("#icons div.dropdown").not(guyToToggle).fadeOut("fast");
+
     });
 </script>

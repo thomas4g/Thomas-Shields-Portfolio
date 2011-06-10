@@ -16,11 +16,11 @@
             <item>
                 <title>@item.title</title>
                 <author>Thomas Shields</author>
-                <link>http://@(Request.Url.Host + Url.Action("Details", "Blog", new { id = item.id }))</link>
-                <guid>http://@(Request.Url.Host + Url.Action("Details", "Blog", new { id = item.id }))</guid>
+                <link>http://@(Request.Url.Host + Url.Action("Post", "Blog", new { id = item.id }))</link>
+                <guid>http://@(Request.Url.Host + Url.Action("Post", "Blog", new { id = item.id }))</guid>
                 <pubDate>@item.date.ToUniversalTime().ToString("r")</pubDate>
                 <description>@(item.content)</description>
-                <comments>http://@(Request.Url.Host + Url.Action("Details", "Blog", new { id = item.id }))#comments</comments>
+                <comments>http://@(Request.Url.Host + Url.Action("Post", "Blog", new { id = item.id }))#comments</comments>
             </item>
         }
     </channel>

@@ -12,7 +12,7 @@ section h2 {
 	display:block;
 	margin-top:0;
 	margin-bottom:5px;
-	margin-left:10px;
+    margin-left:10px;
 }
 .sidebar {
 	padding-top:60px;
@@ -104,16 +104,33 @@ padding-top:0;
     right:20px;
     text-align:right;
     position:absolute;
+    padding:0;
+    margin:0;
 }
-.clickit{ width:50px; cursor:pointer; margin-bottom:10px;}
+#icons  li
+{
+    display:inline;
+    margin-left:10px;
+    /*position:relative; --- this line isn't necessary, but i was fiddling around 
+                            and this element causes an error in Chrome 12 when i 
+                            click on the img to reveal the div... an "Aw Snap" error. */
+}
+.clickit
+{
+     width:50px;
+    cursor:pointer;
+     margin-right:10px; 
+}
 #icons input { width:200px;}
-#icons div 
+#icons div.dropdown 
 {
      display:none; 
      border-radius:5px;
      text-align:center;
+     position:absolute;
+     right:5px;
 }
-#icons .dropdown 
+#icons .rss 
 {
      background-color:#eee; 
      padding: 5px 5px 10px 5px;

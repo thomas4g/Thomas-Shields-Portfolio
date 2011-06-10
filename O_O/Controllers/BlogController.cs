@@ -62,8 +62,7 @@ namespace O_O.Controllers
         }
         //
         // GET: /Blog/Details/5
-
-        public ActionResult Details(int id)
+        public ActionResult Post(int id)
         {
             var post = (from p in db.posts
                          where p.id == id
@@ -74,15 +73,14 @@ namespace O_O.Controllers
                 return View("404");
             }
             post p2 = new post(post.id, post.title, post.content, post.date,post.tag, post.comments.ToList());
-            return View(p2);
+            return View("Details",p2);
         }
-
         //
         // GET: /Blog/Create
         [Authorize]
         public ActionResult Create()
         {
-            return View();
+            return View(new post());
         } 
 
         //

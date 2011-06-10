@@ -26,7 +26,11 @@ namespace O_O
                 "{controller}/{action}/{id}", // URL with parameters
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
             );
-
+            routes.MapRoute(
+                "Blog", // Route name
+                "Blog/{tag}", // URL with parameters
+                new {action = "Details", title = UrlParameter.Optional } // Parameter defaults
+            );
         }
 
         protected void Application_Start()
