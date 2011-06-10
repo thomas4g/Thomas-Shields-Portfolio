@@ -40,7 +40,7 @@ namespace O_O.Controllers
             {
                 db.comments.Add(comment);
                 db.SaveChanges();
-                return RedirectToAction("Details", "Blog", new  { id = comment.post });
+                return RedirectToAction("Post", "Blog", new  { id = comment.post });
             }
 
             return PartialView(comment);
