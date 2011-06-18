@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\EntityFramework.SqlServerCompact.cs" />
+    <Compile Include="Content\Extensions\MenuLink.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
@@ -117,6 +118,7 @@
     <Content Include="Content\Images\code.png" />
     <Content Include="Content\Images\comments.png" />
     <Content Include="Content\Images\design.png" />
+    <Content Include="Content\Images\github.png" />
     <Content Include="Content\Images\info.png" />
     <Content Include="Content\Images\me.png" />
     <Content Include="Content\Images\rss-icon.gif" />
@@ -161,6 +163,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
+    <Content Include="Scripts\PIE.htc" />
     <Content Include="Scripts\tinymce\changelog.txt" />
     <Content Include="Scripts\tinymce\examples\accessibility.html" />
     <Content Include="Scripts\tinymce\examples\css\content.css" />
