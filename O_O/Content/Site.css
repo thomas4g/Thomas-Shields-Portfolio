@@ -1,204 +1,210 @@
 ﻿body {
-	text-align:center;
-	margin:0;
-	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;	
+    text-align:center;
+    margin:0;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;	
 }
 a {
-	color: #CC3300;
-	text-decoration:none;
+    color: #CC3300;
+    text-decoration:none;
 }
 #page {
-	
-	width:1000px;
-	margin:auto;
-	border-left:2px #555 solid;
-	border-right:2px #555 solid;
+    
+    width:1000px;
+    margin:auto;
+    border-left:2px #555 solid;
+    border-right:2px #555 solid;
 }
 header, nav, section, footer{
-	display:block;
+    display:block;
 }
 header {
-	text-align:left;
-	border-bottom:10px #993300 solid;
+    text-align:left;
+    border-bottom:10px #993300 solid;
 }
 h1, h2 {
-	display:inline;
+    display:inline;
 }
 h1 {
-	font-size:70px;
-	margin-right:30px;
-	margin-left:20px;
-	text-shadow: #999 0 0 .04em;
-	font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size:70px;
+    margin-right:30px;
+    margin-left:20px;
+    text-shadow: #999 0 0 .04em;
+    font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 h2 {
-	font-size:20px;
-	color:#999;
-	text-shadow: #999 0 0 .06em;
-	font-weight:normal;
+    font-size:20px;
+    color:#999;
+    text-shadow: #999 0 0 .06em;
+    font-weight:normal;
 }
 h2 a 
 {
-	color:#999;
+    color:#999;
 }
 h2, h3, nav {
-		font-family:"Courier New", Courier, monospace;
-	}
+        font-family:"Courier New", Courier, monospace;
+    }
 h3 {
-	text-shadow: #999 0 0 .05em;
-	font-size:22px;
-	font-weight:normal;
-	margin: 5px 0 5px 30px;
+    text-shadow: #999 0 0 .05em;
+    font-size:22px;
+    font-weight:normal;
+    margin: 5px 0 5px 30px;
 }
 h4 
 {
-	text-shadow: #999 0 0 .04em;
-	font-size:25px;
-	font-weight:normal;
-	margin: 5px 0 5px 15px;
+    text-shadow: #999 0 0 .04em;
+    font-size:25px;
+    font-weight:normal;
+    margin: 5px 0 5px 15px;
 }
 h5
 {
-	font-size:19px;
-	font-weight:normal;
-	margin: 5px 0 5px 15px;
+    font-size:19px;
+    font-weight:normal;
+    margin: 5px 0 5px 15px;
 
 }
 img { border:none;}
 .brackets {
-	font-size:60px;
-	color:#444;
-	text-shadow: #555 0 0 .04em;
-	vertical-align:middle;
+    font-size:60px;
+    color:#444;
+    text-shadow: #555 0 0 .04em;
+    vertical-align:middle;
 
 }
 ul#nav {
-	padding:0;margin:0;
-	display:inline;
-	vertical-align:-5px;
+    padding:0;margin:0;
+    display:inline;
+    vertical-align:-5px;
 }
 ul#nav li {
-	list-style:none;
-	display:inline;
-	color:#666;
-	text-shadow: #666 0 0 .04em;
-	font-weight:bold;
-	font-size:25px;
+    list-style:none;
+    display:inline;
+    color:#666;
+    text-shadow: #666 0 0 .04em;
+    font-weight:bold;
+    font-size:25px;
 
 }
 ul#nav li a {
-	color:#666;
-	text-decoration:none;
-	text-shadow: #666 0 0 .04em;
-	font-weight:bold;
-	padding:0;
+    color:#666;
+    text-decoration:none;
+    text-shadow: #666 0 0 .04em;
+    font-weight:bold;
+    padding:0;
 }
 ul#nav li a.selected {
-	color: #CC3300;
-	text-shadow: #cc3300 0 0 .04em;
+    color: #CC3300;
+    text-shadow: #cc3300 0 0 .04em;
 }
 
 ul#nav li a:hover {
-	color: #CC3300;
-	text-shadow: #cc3300 0 0 .04em;
+    color: #CC3300;
+    text-shadow: #cc3300 0 0 .04em;
 }
 nav {
-	text-align:center;
-	float:right;
-	margin-top:30px;
+    text-align:center;
+    float:right;
+    margin-top:30px;
 }
 #main {
-	text-align:left;
-	padding: 20px 10px 10px 10px;
-	color:#999999;
-	font-size:15px;
-	margin:0;
-	position:relative;
+    text-align:left;
+    padding: 20px 10px 10px 10px;
+    color:#999999;
+    font-size:15px;
+    margin:0;
+    position:relative;
 }
 p {
-	padding-left:15px;
+    padding-left:15px;
 }
 .block {
-	float:left;
-	margin: 10px 10px 10px 15px;
-	width:300px;
-	font-size:13px;
-	font-family:Verdana, Geneva, Tahoma, sans-serif;
-	
+    float:left;
+    margin: 10px 10px 10px 15px;
+    width:300px;
+    font-size:13px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
 }
 .block h4 {
-	text-align:center;
-	font-size:22px;
-	text-shadow: #999 0 0 .05em;
-	margin:10px 0 0 0;
-	padding-right:20px;
-	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    text-align:center;
+    font-size:22px;
+    text-shadow: #999 0 0 .05em;
+    margin:10px 0 0 0;
+    padding-right:20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 .block h4 img {
-	width:30px;
-	vertical-align:bottom;
+    width:30px;
+    vertical-align:bottom;
 }
 footer {
-	color:#999;
-	font-size:13px;
-	margin-top:50px;
-	margin-bottom:10px;
+    color:#999;
+    font-size:13px;
+    margin-top:50px;
+    margin-bottom:10px;
 }
 .input-validation-error 
 {
-	background-color: #FFCECE;
+    background-color: #FFCECE;
 }
 .field-validation-error span
 {
-	color:Red;
-	vertical-align:top;
+    color:Red;
+    vertical-align:top;
 }
 .editor-label
 {
-	text-transform:capitalize;
+    text-transform:capitalize;
 }
 .submit 
 {
-	background-color:#ccc;
-	padding:5px 10px;
-	border:1px solid #555;
-	border-radius:7px;
-	behavior: url("pie.htc");
-	margin-top:10px;
+    background-color:#ccc;
+    padding:5px 10px;
+    border:1px solid #555;
+    border-radius:7px;
+    behavior: url("pie.htc");
+    margin-top:10px;
 }
 .submit:hover 
 {
-	background-color:#bbb;
+    background-color:#bbb;
 }
 .submit:active 
 {
-	background-color:#999;
+    background-color:#999;
 }
 textarea 
 {
-	width:300px;
-	height:100px;
+    width:300px;
+    height:100px;
 }
 input, textarea 
 {
-	font-family:Verdana;
-	color:#555;
+    font-family:Verdana;
+    color:#555;
 }
 .container 
 {
-	border-radius:10px;
-	border:1px solid #888;
-	padding:20px;
-	behavior: url("pie.htc");
+    border-radius:10px;
+    border:1px solid #888;
+    padding:20px;
+    behavior: url("pie.htc");
 }
 code
 {
-	font-family: "Courier New", "Courier", Serif;
-	background-color:#eee;
-	padding:1px 2px;
-
+    font-family: Consolas, "Courier New", "Courier", Serif;
+    background-color:#eee;
+    padding:1px 2px;
+    color:#222;
 }
 code.full 
 {
-	display:block;
+    display:block;
+    margin:4px;
+}
+article 
+{
+    font-family:"Segoe UI", Calibri, Lucida Sans-Serif;
+    color:#888;
 }
