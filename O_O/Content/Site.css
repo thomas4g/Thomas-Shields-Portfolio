@@ -57,7 +57,13 @@ h4
     font-weight:normal;
     margin: 5px 0 5px 15px;
 }
+h5
+{
+    font-size:19px;
+    font-weight:normal;
+    margin: 5px 0 5px 15px;
 
+}
 img { border:none;}
 .brackets {
     font-size:60px;
@@ -184,4 +190,12 @@ input, textarea
     border:1px solid #888;
     padding:20px;
     behavior: url("pie.htc");
+}
+code
+{
+    font-family: "Courier New", "Courier", Serif;
+}
+code.block 
+{
+    display:block;
 }
