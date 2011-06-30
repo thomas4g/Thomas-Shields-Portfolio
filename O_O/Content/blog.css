@@ -27,6 +27,7 @@ text-shadow: #fff 0 0 .04em;
 	color:white;
 	text-align:center;
 	margin-bottom:4px;
+	font-family:"Century Gothic", Arial;
 }
 .sidebar .postDate span  {
 padding-top:3.9px;
@@ -34,7 +35,7 @@ padding-top:3.9px;
 }
 .sidebar .postDate .month {
 	font-size:12px;
-	margin-top:-10px;
+	margin-top:-8px;
 	text-shadow: #fff 0 0 .03em;
 padding-top:0;
 }
