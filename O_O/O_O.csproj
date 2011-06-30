@@ -38,6 +38,9 @@
       <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Stacky">
+      <HintPath>Content\Stacky\Stacky.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <Private>True</Private>
@@ -75,7 +78,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\EntityFramework.SqlServerCompact.cs" />
+    <Compile Include="Content\DateStuff.cs" />
     <Compile Include="Content\Extensions\MenuLink.cs" />
+    <Compile Include="Content\GetStackOverflowItemText.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
@@ -87,6 +92,7 @@
     <Compile Include="Models\comment.cs" />
     <Compile Include="Models\post.cs" />
     <Compile Include="Models\PostContext.cs" />
+    <Compile Include="Models\StackOverflowItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -125,6 +131,12 @@
     <Content Include="Content\Images\rss.gif" />
     <Content Include="Content\Images\so.png" />
     <Content Include="Content\Images\theology.png" />
+    <Content Include="Content\Stacky\Newtonsoft.Json.dll" />
+    <Content Include="Content\Stacky\Newtonsoft.Json.pdb" />
+    <Content Include="Content\Stacky\Newtonsoft.Json.xml" />
+    <Content Include="Content\Stacky\Stacky.dll" />
+    <Content Include="Content\Stacky\Stacky.pdb" />
+    <Content Include="Content\Stacky\Stacky.XML" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -473,6 +485,7 @@
     <None Include="Scripts\tinymce\examples\media\sample.flv" />
     <None Include="Scripts\tinymce\examples\media\sample.ram" />
     <None Include="Scripts\tinymce\examples\media\sample.rm" />
+    <Content Include="Views\Blog\StackOverflow.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

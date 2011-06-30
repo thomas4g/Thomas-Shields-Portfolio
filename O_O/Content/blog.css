@@ -133,4 +133,9 @@ padding-top:0;
      background-color:#eee; 
      padding: 5px 5px 10px 5px;
 }
-
+#SOActivity 
+{
+    background-color:#eee;
+    text-align:center;
+    padding:10px;
+}

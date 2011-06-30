@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using O_O.Models;
-
+using Stacky;
 namespace O_O.Controllers
 { 
     public class BlogController : Controller
@@ -27,6 +27,13 @@ namespace O_O.Controllers
                 posts.Add(new post(item.id, item.title, item.content, item.date, item.tag, item.comments.ToList()));
             }
             return View(posts);
+        }
+        public ActionResult StackOverflow()
+        {
+            StackyClient c = new StackyClient("1.1", "Lu0luEh2cUu9UoasZwXdhw", Stacky.Sites.StackOverflow, new UrlClient(), new JsonProtocol());
+            Stacky.User u = c.GetUser(719312);
+            List<UserEvent> stuff = c.GetUserTimeline(u.Id, 1, 15).ToList();
+            return PartialView(stuff);
         }
         public ActionResult Tag(string id) //id = tag 
         {
