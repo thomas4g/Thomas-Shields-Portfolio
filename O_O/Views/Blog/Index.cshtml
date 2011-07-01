@@ -3,6 +3,10 @@
 @{
     ViewBag.Title = "Blog";
 }
+@section head {
+<script type="text/javascript" src="../../Scripts/sh_main.min.js"></script>
+<link rel="Stylesheet" href="../../Content/sh_the.min.css" />
+}
 
 <ul id="icons">
     <li>
@@ -48,4 +52,7 @@
             });
         }
     });
+    window.onload = function () {
+        sh_highlightDocument('../../Scripts/', '.min.js');
+    }
 </script>

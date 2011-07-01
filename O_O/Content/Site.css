@@ -203,6 +203,10 @@ code.full
     display:block;
     margin:4px;
 }
+pre 
+{
+    margin-left:15px;
+}
 article 
 {
     font-family:"Segoe UI", Calibri, Lucida Sans-Serif;

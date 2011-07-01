@@ -131,6 +131,7 @@
     <Content Include="Content\Images\rss.gif" />
     <Content Include="Content\Images\so.png" />
     <Content Include="Content\Images\theology.png" />
+    <Content Include="Content\sh_the.min.css" />
     <Content Include="Content\Stacky\Newtonsoft.Json.dll" />
     <Content Include="Content\Stacky\Newtonsoft.Json.pdb" />
     <Content Include="Content\Stacky\Newtonsoft.Json.xml" />
@@ -176,6 +177,10 @@
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
     <Content Include="Scripts\PIE.htc" />
+    <Content Include="Scripts\sh_csharp.min.js" />
+    <Content Include="Scripts\sh_html.min.js" />
+    <Content Include="Scripts\sh_javascript.min.js" />
+    <Content Include="Scripts\sh_main.min.js" />
     <Content Include="Scripts\tinymce\changelog.txt" />
     <Content Include="Scripts\tinymce\examples\accessibility.html" />
     <Content Include="Scripts\tinymce\examples\css\content.css" />
