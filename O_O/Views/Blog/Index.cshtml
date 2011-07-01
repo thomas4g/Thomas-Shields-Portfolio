@@ -6,46 +6,28 @@
 
 <ul id="icons">
     <li>
-        <img class="clickit" alt="rss" title="Rss Feed URL" src="@Url.Content("~/Content/Images/rss.gif")" />
-        <div class="dropdown rss">
+        <img class="clickit" alt="rss" title="View My Rss Feed URL" src="@Url.Content("~/Content/Images/rss.gif")" />
+        <div class="rss dropdown">
             Copy the URL below into your RSS reader <br />
             <input value="http://@Request.Url.Host/Blog/RSS" />
         </div>
     </li>
     <li>
-        <img class="clickit Stack" src="@Url.Content("~/Content/Images/so.png")" alt="Stack Overflow Logo" title="View My Stack Overflow Profile" style="width:40px"/>
+        <img class="clickit Stack" src="@Url.Content("~/Content/Images/so.png")" alt="Stack Overflow Logo" title="View My Stack Overflow Activity" style="width:40px"/>
         <div class="dropdown">
             <div id="SOActivity"></div>
             <a href="http://stackoverflow.com/users/719312/thomas-shields">
-                <img src="http://stackoverflow.com/users/flair/719312.png" width="208" height="58" alt="profile for Thomas Shields at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Thomas Shields at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+                <img src="http://stackoverflow.com/users/flair/719312.png?theme=clean" width="208" height="58" alt="profile for Thomas Shields at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Thomas Shields at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
             </a>
         </div>
     </li>
     <li>
-        <img class="clickit" src="@Url.Content("~/Content/Images/github.png")" alt="Github Logo" title="View My Projects on Github" style="width:40px"/>
+        <a href="https://github.com/thomas4g"><img class="clickit" src="@Url.Content("~/Content/Images/github.png")" alt="Github Logo" title="View My Projects on Github" style="width:40px"/></a>
         <div class="dropdown">
         </div>
     </li>
 
 </ul>
-@*<div id="icons">
-<div class="icon">
-    <img class="clickit" alt="rss" title="Rss Feed URL" src="@Url.Content("~/Content/Images/rss.gif")" />
-    <div class="dropdown">
-        Copy the URL below into your RSS reader <br />
-        <input value="http://@Request.Url.Host/Blog/RSS" />
-    </div>
-</div>
-<div class="icon">
-    <img class="clickit" src="@Url.Content("~/Content/Images/so.png")" alt="Stack Overflow Logo" title="View My Stack Overflow Profile" />
-    <div>
-        <a href="http://stackoverflow.com/users/719312/thomas-shields">
-            <img src="http://stackoverflow.com/users/flair/719312.png" width="208" height="58" alt="profile for Thomas Shields at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Thomas Shields at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
-        </a>
-    </div>
-</div>
-</div>
-*@
 @foreach (var item in Model)
 {
         @Html.Partial("Post", item);
@@ -54,6 +36,7 @@
     $(".clickit").click(function () {
         var guyToToggle = $(this).next();
         guyToToggle.slideToggle("fast");
+        this.title.indexOf("Hide") !== -1 ? this.title = this.title.replace("Hide", "View") : this.title = this.title.replace("View", "Hide");
         $("#icons div.dropdown").not(guyToToggle).fadeOut("fast");
 
     });
