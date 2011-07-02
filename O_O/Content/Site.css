@@ -269,10 +269,12 @@ article
      {
          margin:0;
      }
+     
      header nav 
      {
          margin:0;
          float:none;
+         display:block;
      }
 }
 #blockWrapper 
