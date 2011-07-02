@@ -2,9 +2,7 @@
 	margin:30px;
 }
 section.blogPost article {
-	float:left;
-	width:805px;
-	margin-right:15px;
+margin-left:50px;
 }
 section h2 {
 	font-size:45px;
@@ -15,11 +13,13 @@ section h2 {
 }
 .sidebar {
 	float:left;
-	margin-right:20px;
+	width:4%;
+	min-width:50px;
+	max-width:50px;
 }
 .sidebar .postDate {
 text-shadow: #fff 0 0 .04em;
-	width:50px;
+	width:100%;
 	height:50px;
 	background-image: url('../Content/Images/calendar.png');
 	background-repeat:no-repeat;
@@ -40,7 +40,7 @@ padding-top:3.9px;
 padding-top:0;
 }
 .sidebar .comments {
-	width:50px;
+	width:100%;
 	height:40px;
 	color:#222;
 	text-shadow:#222 0 0 1px;
@@ -51,9 +51,9 @@ padding-top:0;
 	background-repeat:no-repeat;
 	font-size:20px;
 }
-.sidebar .comments a { color: #222 }
+.sidebar .comments a { width:100%; color: #222 }
 .sidebar img {
-	width:50px;
+	width:100%;
 }
 #comments 
 {
@@ -141,4 +141,38 @@ padding-top:0;
 {
     text-align:center;
     padding:10px;
+}
+.mobileSideBar 
+{
+    display:none;
+}
+@media screen and (max-width:480px) 
+{
+     section.blogPost 
+     {
+         margin:0;
+     }
+     div.sidebar 
+     {
+         display:none;
+     }
+     section.blogPost article 
+     {
+         margin:0;
+     }
+     section.blogPost h2 
+     {
+         font-size:25px;
+     }
+     #icons 
+     {
+         top:auto;
+         bottom:0;
+         right:0;
+     }
+     .mobileSideBar 
+    {
+        display:block;
+    }
+
 }

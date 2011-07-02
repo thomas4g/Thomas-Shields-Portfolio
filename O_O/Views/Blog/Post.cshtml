@@ -4,6 +4,7 @@
 }
 <section class="blogPost">
         <h2>@(Html.ActionLink(Model.title,"Post",new {id = Model.id}))</h2>
+        <div class="mobileSideBar">@(months[Model.date.Month - 1]) @Model.date.Day, @Model.date.Year | <a href="@(Url.Action("Post",new {id=Model.id}))#comments">@Model.comments.Count comments</a> | <a href="@Url.Action("Tag",new {id=Model.tag })">@Model.tag</a> </div>
         <div class="sidebar">
             <div class="postDate"><span>@Model.date.Day</span><span class="month">@(months[Model.date.Month - 1])</span></div>
             <div class="comments"><span><a href="@(Url.Action("Post",new {id=Model.id}))#comments">
