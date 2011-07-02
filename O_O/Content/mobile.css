@@ -28,3 +28,31 @@ header nav
     display:block;
     float:none;
 }
+section.blogPost 
+{
+    margin:0;
+}
+div.sidebar 
+{
+    display:none;
+}
+section.blogPost article 
+{
+    margin:0;
+    font-size:20px;
+}
+section.blogPost h2 
+{
+    font-size:35px;
+}
+#icons 
+{
+    top:auto;
+    bottom:0;
+    right:0;
+}
+.mobileSideBar 
+{
+display:block;
+}
+
