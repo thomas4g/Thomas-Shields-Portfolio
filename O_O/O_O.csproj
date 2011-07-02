@@ -120,6 +120,7 @@
     <Content Include="bin\x86\sqlceqp40.dll" />
     <Content Include="bin\x86\sqlcese40.dll" />
     <Content Include="Content\blog.css" />
+    <Content Include="Content\mobile.css" />
     <Content Include="Content\Images\calendar.png" />
     <Content Include="Content\Images\code.png" />
     <Content Include="Content\Images\comments.png" />
