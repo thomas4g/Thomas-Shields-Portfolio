@@ -159,11 +159,12 @@ padding-top:0;
      section.blogPost article 
      {
          margin:0;
-         font-size:18px;
+         font-size:20px;
      }
      section.blogPost h2 
      {
-         font-size:25px;
+         font-size:30px;
+         text-shadow:none;
      }
      #icons 
      {
