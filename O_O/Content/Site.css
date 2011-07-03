@@ -10,38 +10,32 @@ a {
 #page {
     
     width:85%;
-    max-width:2000px;
     margin:auto;
     border-left:2px #555 solid;
     border-right:2px #555 solid;
 }
-header, nav, section, footer{
+header, nav, section, article, footer{
     display:block;
 }
 header {
     text-align:left;
     border-bottom:10px #993300 solid;
-}
-h1, h2 {
-    display:inline;
+    overflow:auto;
 }
 h1 {
     font-size:70px;
     margin:0 30px 0 20px;
     text-shadow: #999 0 0 .04em;
     font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    display:inline-block;
-    *display:inline;
-    zoom:1;
+    float:left;
 }
+header h2 { float:left }
 h2 {
     font-size:20px;
     color:#999;
     text-shadow: #999 0 0 .06em;
     font-weight:normal;
-    display:inline-block; 
-    *display:inline;
-    zoom:1;
+    margin-top:60px;
 }
 h2 a 
 {
@@ -111,11 +105,7 @@ ul#nav li a:hover {
 nav {
     text-align:center;
     float:right;
-    display:inline-block;
-    *display:inline;
-    zoom:1;
     margin-top:30px;
-    *margin-top:-70px;
 }
 #main {
     text-align:left;
@@ -137,6 +127,7 @@ p {
     font-size:13px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     text-align:left;
+    vertical-align:top;
 }
 .block h4 {
     text-align:center;
@@ -233,6 +224,7 @@ article
       #page 
      {
          width:100%;
+         margin:0;
      }  
    
 }
@@ -268,6 +260,7 @@ article
      header h1 
      {
          margin:0;
+         float:none;
      }
      
      header nav 
