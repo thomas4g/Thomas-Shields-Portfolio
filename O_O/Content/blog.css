@@ -8,7 +8,7 @@ section h2 {
 	font-size:45px;
 	text-shadow: #999 0 0 2px;
 	display:block;
-	margin-top:0;
+	margin-top:5px;
 	margin-bottom:15px;
 }
 .sidebar {
@@ -105,6 +105,7 @@ padding-top:0;
     position:absolute;
     padding:0;
     margin:0;
+    width:200px;
 }
 #icons  li
 {
@@ -146,6 +147,56 @@ padding-top:0;
 {
     display:none;
 }
+code
+{
+    font-family: Consolas, "Courier New", "Courier", Serif;
+    background-color:#eee;
+    padding:1px 2px;
+    color:#222;
+}
+code.full 
+{
+    display:block;
+    margin:4px;
+}
+pre 
+{
+    margin-left:15px;
+}
+article 
+{
+    font-family:"Segoe UI", Calibri, Lucida Sans-Serif;
+    color:#444;
+}
+.container 
+{
+    border-radius:10px;
+    border:1px solid #888;
+    padding:20px;
+    behavior: url("pie.htc");
+}
+
+@media screen and (max-width:1045px) 
+{
+    section.blogPost h2 
+    {
+        font-size:30px;
+    }
+}
+@media screen and (max-width:560px) 
+{
+    section.blogPost h2 
+    {
+        font-size:25px;
+    }
+         #icons 
+     {
+         top:auto;
+         bottom:0;
+         right:0;
+     }
+
+}
 @media screen and (max-width:480px) 
 {
      section.blogPost 
@@ -165,12 +216,6 @@ padding-top:0;
      {
          font-size:30px;
          text-shadow:none;
-     }
-     #icons 
-     {
-         top:auto;
-         bottom:0;
-         right:0;
      }
      .mobileSideBar 
     {

@@ -1,11 +1,15 @@
 ﻿body {
     text-align:center;
     margin:0;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;	
 }
 a {
     color: #CC3300;
     text-decoration:none;
+}
+img 
+{
+    border:none;
+    max-width:100%;
 }
 #page {
     
@@ -13,6 +17,9 @@ a {
     margin:auto;
     border-left:2px #555 solid;
     border-right:2px #555 solid;
+    font-size:15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;	
+
 }
 header, nav, section, article, footer{
     display:block;
@@ -29,19 +36,22 @@ h1 {
     font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     float:left;
 }
-header h2 { float:left }
-h2 {
+.description 
+{
     font-size:20px;
     color:#999;
     text-shadow: #999 0 0 .06em;
     font-weight:normal;
-    margin-top:60px;
+}
+h2 
+{
+        font-weight:normal;
 }
 h2 a 
 {
     color:#999;
 }
-h2, h3, nav {
+h2, h3, nav, .description {
         font-family:"Courier New", Courier, monospace;
     }
 h3 {
@@ -57,14 +67,7 @@ h4
     font-weight:normal;
     margin: 5px 0 5px 15px;
 }
-h5
-{
-    font-size:19px;
-    font-weight:normal;
-    margin: 5px 0 5px 15px;
 
-}
-img { border:none;}
 .brackets {
     font-size:60px;
     color:#444;
@@ -80,11 +83,6 @@ ul#nav {
 ul#nav li {
     list-style:none;
     display:inline;
-    color:#666;
-    text-shadow: #666 0 0 .04em;
-    font-weight:bold;
-    font-size:25px;
-
 }
 ul#nav li a {
     color:#666;
@@ -92,6 +90,7 @@ ul#nav li a {
     text-shadow: #666 0 0 .04em;
     font-weight:bold;
     padding:0;
+    font-size:25px;
 }
 ul#nav li a.selected {
     color: #CC3300;
@@ -111,7 +110,6 @@ nav {
     text-align:left;
     padding: 20px 10px 10px 10px;
     color:#444;
-    font-size:15px;
     margin:0;
     position:relative;
 }
@@ -129,7 +127,7 @@ p {
     text-align:left;
     vertical-align:top;
 }
-.block h4 {
+.block h3 {
     text-align:center;
     font-size:22px;
     text-shadow: #999 0 0 .05em;
@@ -137,7 +135,7 @@ p {
     padding-right:20px;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
-.block h4 img {
+.block h3 img {
     width:30px;
     vertical-align:bottom;
 }
@@ -187,68 +185,53 @@ input, textarea
     font-family:Verdana;
     color:#555;
 }
-.container 
+@media screen and (max-width:1170px) 
 {
-    border-radius:10px;
-    border:1px solid #888;
-    padding:20px;
-    behavior: url("pie.htc");
+ header h1 
+ {
+     margin:0;
+ }   
 }
-code
+@media screen and (max-width:1120px) 
 {
-    font-family: Consolas, "Courier New", "Courier", Serif;
-    background-color:#eee;
-    padding:1px 2px;
-    color:#222;
+    .brackets 
+     {
+         display:none;
+     } 
+    nav 
+     {
+         margin:55px 10px 0 0;
+     }
+
 }
-code.full 
+@media screen and (max-width:1035px) 
 {
-    display:block;
-    margin:4px;
+     ul#nav li a
+     {
+         font-size:20px;
+     }
+     nav { margin-top:60px; }
+     header h1 span.description { font-size: 16px }
 }
-pre 
+@media screen and (max-width:920px) 
 {
-    margin-left:15px;
+    header h1 span.description { display:none }
 }
-article 
-{
-    font-family:"Segoe UI", Calibri, Lucida Sans-Serif;
-    color:#444;
-}
-@media screen and (max-width:1045px) 
-{
-    header h2 { display:none }
-}
-@media screen and (max-width:700px) 
+@media screen and (max-width:800px) 
 {
       #page 
      {
          width:100%;
          margin:0;
+         border:none;
      }  
    
 }
 @media screen and (max-width:560px) 
 {
-     .brackets 
-     {
-         display:none;
-     } 
-     #nav li 
-     {
-         font-size:20px;
-     }
-     nav 
-     {
-         margin:60px 10px 0 0;
-     }
      .block 
      {
          font-size:19px;
-     }
-     #main h3 
-     {
-      display:none;   
      }
 }
 @media screen and (max-width:480px) 
