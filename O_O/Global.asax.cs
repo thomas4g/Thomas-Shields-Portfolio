@@ -22,14 +22,18 @@ namespace O_O
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                "About",
+                "About",
+                new { controller = "Home", action = "About" });
+            routes.MapRoute(
+                "Pagination",
+                "Blog/Index/{page}",
+                new { controller = "Blog", action="Index",page = UrlParameter.Optional }
+            );
+            routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
-            );
-            routes.MapRoute(
-                "Blog", // Route name
-                "Blog/{tag}", // URL with parameters
-                new {action = "Details", title = UrlParameter.Optional } // Parameter defaults
             );
         }
 

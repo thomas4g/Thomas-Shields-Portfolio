@@ -55,6 +55,14 @@ padding-top:0;
 .sidebar img {
 	width:100%;
 }
+a.next 
+{
+    float:right;
+}
+a.previous 
+{
+    float:left;
+}
 #comments 
 {
     margin-left:80px;

@@ -15,17 +15,23 @@ namespace O_O.Controllers
 
         //
         // GET: /Blog/
-        public ViewResult Index()
+        public ActionResult Index(int page = 1)
         {
-            Database.SetInitializer<PostContext>(null);
+            int pageSize = 5;
             var _posts = (from p in db.posts
                           orderby p.date descending
-                        select new { p.id, p.title, p.content, p.date, p.tag, comments = (from c in db.comments where c.post == p.id select c) });
+                          select new { p.id, p.title, p.content, p.date, p.tag, comments = (from c in db.comments where c.post == p.id select c) });
+            int numPosts = _posts.Count();
+            if (pageSize * (page - 1) >= numPosts) return RedirectToAction("Index", new { page = 1 });
+            _posts = _posts.Skip((page - 1) * pageSize).Take(pageSize);
             var posts = new List<post>();
             foreach (var item in _posts)
             {
                 posts.Add(new post(item.id, item.title, item.content, item.date, item.tag, item.comments.ToList()));
             }
+            ViewBag.pageNum = page;
+            ViewBag.numPosts = numPosts;
+            ViewBag.pageSize = pageSize;
             return View(posts);
         }
         public ActionResult StackOverflow()

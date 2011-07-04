@@ -11,6 +11,11 @@ namespace O_O.Content.Extensions
         {
             var item = new TagBuilder("a");
             item.Attributes.Add("href", "/" + controller + "/" + action);
+            if (controller == "About")
+            {
+                controller = "Home";
+                action = controller;
+            }
             var currAction = (string)htmlHelper.ViewContext.RouteData.Values["action"];
             var currContr = (string)htmlHelper.ViewContext.RouteData.Values["controller"];
             if ((controller.ToLower() == currContr.ToLower() && action.ToLower() == currAction.ToLower()) || (currContr.ToLower() == "blog" && controller.ToLower() == "blog")) item.AddCssClass("selected");
