@@ -1,17 +1,41 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-
+@section head {
+<style type="text/css">
+.mePic 
+{
+    width:150px; float:left; margin-right:10px;
+}
+section.about 
+{
+    display:block;
+    margin-left:160px;
+}
+</style>
+}
 <h3>About Me</h3>
-<p>
-    <img alt="me" title="Yeah...that's me" src="@Url.Content("~/Content/images/me.png")" style="width:150px; float:left; margin-right:10px;"/> Howdy! I'm Thomas. In no particular order, I'm a student, a computer programmer, web designer, and most importantly, a Christian. 
-  I'm determined to take a firm stand with the content I present and attempt to do everything for God's glory. I suppose the best way to get to know me is read my posts. :-) 
-  You can <a href="mailto:thomas@mpdteam.net">contact me</a> if you've got any: 
-  <ul style="padding-left:200px">
-    <li>Ideas - for the design of the website, for features of the site, for  blog post ideas, etc.</li>
-    <li>Complaints - ha, yeah right.</li>
-    <li>Compliments - again, yeah right. Plus, you can leave those in comments</li>
-    <li>...thing you want to say to me. But, if I don't know you, (especially if you've never commented) I'll probably delete it. :) </li>
-  </ul>
-
-</p>
+    <img alt="a picture of me" title="A picture of me" src="@Url.Content("~/Content/images/me.png")" class="mePic"/>
+    <section class="about">
+        I am...
+        <ul>
+            <li>Thomas Shields</li>
+            <li>@((DateTime.Now - new DateTime(1994,7,12)).Days/365) years old</li>
+            <li>Homeschooled</li>
+            <li>A Reformed Christian: saved by grace through faith in my Lord Jesus Christ</li>
+            <li>A future Pastor wannabe</li>
+            <li>A web developer</li>
+            <li>A web designer</li>
+            <li>A future web design startup wannabe. I just hope I don’t become <a href="http://www.youtube.com/watch?v=LMmdl4VltD4&feature=related">these guys</a></li>
+            <li>A lover of and worker with: HTML, CSS, JavaScript, C#, ASP.NET MVC</li>
+            <li>A lover of good design</li>
+        </ul>
+        This website is...
+        <ul>
+            <li>Inspired by Robby Ingebretsen's <a href="http://nerdplusart.com">Nerd Plus Art</a></li>
+            <li>&copy; Copyright @DateTime.Now.Year Thomas Shields</li>
+            <li>Built on ASP.NET MVC 3</li>
+            <li>Uses semantic HTML5 markup and a <a href="http://en.wikipedia.org/wiki/Progressive_Enhancement">Progressive Enhancement</a> approach to design</li>
+            <li>Still in the works: <a href="mailto:thomasshields@live.com">shoot me an email</a> if you find a bug or have any suggestions</li>
+        </ul>
+    </section>

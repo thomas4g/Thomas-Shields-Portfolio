@@ -185,6 +185,24 @@ input, textarea
     font-family:Verdana;
     color:#555;
 }
+blockquote 
+{
+    margin:0 0 0 30px;
+    padding:10px;
+    background-color:#eee;
+    border-left:5px solid #930;
+}
+blockquote:before 
+{
+    content:"“";
+    font-family:Georgia, Times New Roman;
+    font-size:50px;
+    margin-left:-.9em;
+    margin-top:-.5em;
+    display:block;
+    float:left;
+    font-weight:bold;
+}
 @media screen and (max-width:1170px) 
 {
  header h1 
