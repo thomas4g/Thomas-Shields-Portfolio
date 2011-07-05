@@ -15,9 +15,9 @@ section.about
 </style>
 }
 <h3>About Me</h3>
-    <img alt="a picture of me" title="A picture of me" src="@Url.Content("~/Content/images/me.png")" class="mePic"/>
+    <img alt="a picture of me" title="A picture of me" src="http://www.gravatar.com/avatar/@ViewBag.EmailHash?s=200" class="mePic"/>
     <section class="about">
-        I am...
+        I am
         <ul>
             <li>Thomas Shields</li>
             <li>@((DateTime.Now - new DateTime(1994,7,12)).Days/365) years old</li>
