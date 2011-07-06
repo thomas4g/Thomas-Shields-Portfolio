@@ -17,15 +17,7 @@ namespace O_O.Controllers
 
         public ActionResult About()
         {
-            System.Security.Cryptography.MD5CryptoServiceProvider md5 = new System.Security.Cryptography.MD5CryptoServiceProvider();
-            byte[] bytes = System.Text.Encoding.UTF8.GetBytes("thomas@mpdteam.net");
-            bytes = md5.ComputeHash(bytes);
-            System.Text.StringBuilder s = new System.Text.StringBuilder();
-            foreach (byte b in bytes)
-            {
-                s.Append(b.ToString("x2").ToLower());
-            }
-            ViewBag.EmailHash = s;
+            ViewBag.EmailHash = O_O.Content.MD5HashToString.StringToHashToString("thomas@mpdteam.net");
             return View();
         }
         public ViewResult NotFound()

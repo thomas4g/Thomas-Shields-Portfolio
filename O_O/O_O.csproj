@@ -81,6 +81,7 @@
     <Compile Include="Content\DateStuff.cs" />
     <Compile Include="Content\Extensions\MenuLink.cs" />
     <Compile Include="Content\GetStackOverflowItemText.cs" />
+    <Compile Include="Content\MD5HashToString.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\CommentsController.cs" />

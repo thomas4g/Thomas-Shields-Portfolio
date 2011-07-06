@@ -20,24 +20,27 @@ section h2 {
 .sidebar .postDate {
 text-shadow: #fff 0 0 .04em;
 	width:100%;
-	height:50px;
-	background-image: url('../Content/Images/calendar.png');
 	background-repeat:no-repeat;
 	font-size:30px;
 	color:white;
 	text-align:center;
 	margin-bottom:4px;
+	background-color:#ccc;
+	border-radius:5px;
 	font-family:"Century Gothic", Arial;
 }
-.sidebar .postDate span  {
-padding-top:3.9px;
+.sidebar .postDate .day  {
+    line-height:30px;
+    font-size:30px;
 	display:block;
+	padding-bottom:1px;
 }
 .sidebar .postDate .month {
-	font-size:12px;
-	margin-top:-8px;
-	text-shadow: #fff 0 0 .03em;
-padding-top:0;
+	font-size:14px;
+	border-radius:5px 5px 0 0;
+	padding:0 1px 0 1px;
+	background-color:#930;
+	display:block;
 }
 .sidebar .comments {
 	width:100%;
@@ -68,38 +71,8 @@ a.previous
     margin-left:80px;
     margin-top:40px;
 }
-#comments .author 
-{
-    float:left;
-}
-#comments .content 
-{
-    float:left;
-    width:auto;
-    max-width:450px;
 
-}
-#comments .quotes
-{
-    margin-top:-10px;
-    font-size:40px;
-    vertical-align:top;
-    float:left;
-    margin-left:10px;
-}
-#comments .text 
-{
-    float:left;
-}
-#comments .closing 
-{
-    float:right;
-}
-#comments .authorSpan
-{
-        color: #CC3300;
-}
-.addComment {margin: 0 40px; text-align:left;}
+.addComment {margin: 20px 40px 0 40px; text-align:left;}
 .comment-container 
 {
  margin:20px 130px 0 0;
@@ -183,7 +156,33 @@ article
     padding:20px;
     behavior: url("pie.htc");
 }
-
+blockquote.comment 
+{
+ margin:20px 100px 0 0;
+ padding-right:20px;
+ font-family: Segoe UI, Calibri, Sans-Serif;
+}
+blockquote footer 
+{
+    position:static;
+    margin:5px 0 0 0;
+    color:#000;
+    background-repeat:no-repeat;
+    padding:0px 0 0px 50px;
+    height:40px;
+}
+.comment-author 
+{
+font-size:14px;
+}
+.comment-date
+{
+    display:block;
+    color:#555;
+}
+blockquote footer:before 
+{
+}
 @media screen and (max-width:1045px) 
 {
     section.blogPost h2 

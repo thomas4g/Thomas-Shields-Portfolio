@@ -92,7 +92,7 @@ ul#nav li a {
     color:#666;
     text-decoration:none;
     text-shadow: #666 0 0 1px;
-    font-weight:bold;
+    font-family:Consolas,monospace;
     padding:0;
     font-size:25px;
 }
@@ -112,7 +112,7 @@ nav {
 }
 #main {
     text-align:left;
-    padding: 20px 10px 10px 10px;
+    padding: 20px 10px 50px 10px;
     color:#444;
     margin:0;
     position:relative;
