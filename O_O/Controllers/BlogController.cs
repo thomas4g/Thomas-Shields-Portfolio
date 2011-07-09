@@ -41,23 +41,31 @@ namespace O_O.Controllers
             List<UserEvent> stuff = c.GetUserTimeline(u.Id, 1, 15).ToList();
             return PartialView(stuff);
         }
-        public ActionResult Tag(string id) //id = tag 
+        public ActionResult Tag(string tag, int page = 1) //id = tag 
         {
-            if (id == "" | id== null)
+
+            if (tag == "" | tag== null)
             {
                return RedirectToAction("Index");
             }
-
+            int pageSize = 5;
             var _posts = (from p in db.posts
-                          where p.tag.ToLower() == id.ToLower()
+                          where p.tag.ToLower() == tag.ToLower()
                           orderby p.date descending
                           select new { p.id, p.title, p.content, p.date, p.tag, comments = (from c in db.comments where c.post == p.id select c) });
-            if (_posts == null) return RedirectToAction("Index");
+            if (_posts == null) return RedirectToAction("Index", new { page = 1 });
+            int numPosts = _posts.Count();
+            if (pageSize * (page - 1) >= numPosts) return RedirectToAction("Index", new { page = 1 });
+            _posts = _posts.Skip((page - 1) * pageSize).Take(pageSize);
             var posts = new List<post>();
             foreach (var item in _posts)
             {
                 posts.Add(new post(item.id, item.title, item.content, item.date, item.tag, item.comments.ToList()));
-            }
+            } 
+            ViewBag.pageNum = page;
+            ViewBag.numPosts = numPosts;
+            ViewBag.pageSize = pageSize;
+
             return View("Index", posts);
         }
         public ViewResult Rss()

@@ -26,6 +26,11 @@ namespace O_O
                 "About",
                 new { controller = "Home", action = "About" });
             routes.MapRoute(
+                "Tag",
+                "Blog/Tag/{tag}/{page}",
+                new { controller = "Blog", action = "Tag", tag = UrlParameter.Optional, page = UrlParameter.Optional }
+                );
+            routes.MapRoute(
                 "Pagination",
                 "Blog/Index/{page}",
                 new { controller = "Blog", action="Index",page = UrlParameter.Optional }
