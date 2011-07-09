@@ -7,8 +7,7 @@ body {
     margin:0 0 0px 0;
     font-size:15px;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;	
-     overflow-x:hidden;
-     position:relative;
+    position:relative;
 }
 a {
     color: #CC3300;
@@ -126,12 +125,10 @@ p {
 }
 .block {
     display:inline-block;
-    *display:inline;
-    zoom:1;
     margin: 10px 10px 10px 15px;
     width:300px;
     font-size:13px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, "sans-serif";
     text-align:left;
     vertical-align:top;
 }
@@ -178,7 +175,6 @@ body > footer a { color: #eee; }
     padding:5px 10px;
     border:1px solid #555;
     border-radius:7px;
-    behavior: url("pie.htc");
     margin-top:10px;
 }
 .submit:hover 
@@ -209,7 +205,7 @@ blockquote
 blockquote:before 
 {
     content:"“";
-    font-family:Georgia, Times New Roman;
+    font-family:Georgia, "Times New Roman", Serif;
     font-size:50px;
     margin-left:-.9em;
     margin-top:-.5em;
