@@ -128,7 +128,7 @@ p {
     margin: 10px 10px 10px 15px;
     width:300px;
     font-size:13px;
-    font-family:Verdana, Geneva, Tahoma, "sans-serif";
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     text-align:left;
     vertical-align:top;
 }

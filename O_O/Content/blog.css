@@ -188,7 +188,7 @@ pre
 }
 article 
 {
-    font-family:"Segoe UI", Calibri, Lucida Sans-Serif;
+    font-family:"Segoe UI", Calibri, "Lucida Sans-Serif";
     color:#444;
 }
 .container 
@@ -196,13 +196,12 @@ article
     border-radius:10px;
     border:1px solid #888;
     padding:20px;
-    behavior: url("pie.htc");
 }
 blockquote.comment 
 {
  margin:20px 100px 0 0;
  padding-right:20px;
- font-family: Segoe UI, Calibri, Sans-Serif;
+ font-family: "Segoe UI", Calibri, Sans-Serif;
 }
 blockquote footer 
 {
