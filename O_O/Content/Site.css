@@ -158,24 +158,6 @@ footer {
     background-color:#930;
 }
 footer a { color: #eee; }
-footer:before, footer:after 
-{
-    content:"";
-    position:absolute;
-    height:30px;
-    width:9999px;
-    background-color:#930;
-    bottom:0;
-}
-footer:before 
-{
-    left:-9999px;
-}
-footer:after 
-{
-    right:-9999px;
-}
-
 .input-validation-error 
 {
     background-color: #FFCECE;
