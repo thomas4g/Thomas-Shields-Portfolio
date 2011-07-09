@@ -28,7 +28,17 @@
 </head>
 <body>
     <div id="page">
-    <!--[if lt IE 7]><center> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div></center> <![endif]-->
+    <!--[if lt IE 7]>
+    <center>
+     <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div></center> 
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <noscript style="display:block; margin:0 auto; font-size:30px; color:red; background-color:#eee;">
+        <div style="padding:5px;">
+        Since you're using an old browser, scripting is required to display this website correctly. Please turn on JavaScript or unblock this website's scripts
+        </div>
+        </noscript>
+    <![endif]-->
         <header>
                     <h1>O_O <span class="description">A Weblog of OOP & Startling Web Design</span></h1>
 
@@ -48,12 +58,13 @@
             @RenderBody()
             <div style="clear:both"></div>
         </div>
-        <footer>
+    </div>
+            <footer>
             &copy; Thomas Shields | Site Design Inspired by <a href="http://nerdplusart.com">NerdPlusArt</a> | @Html.Partial("_LogOnPartial")
             @if (Request.IsAuthenticated) { 
             <text>| @Html.ActionLink("New Post","Create","Blog")</text>
             }
         </footer>
-    </div>
+
 </body>
 </html>

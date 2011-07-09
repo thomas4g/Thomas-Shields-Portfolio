@@ -1,8 +1,19 @@
-﻿section {
-	margin:30px;
+﻿section#posts 
+{
+    margin:20px 150px 0 20px;
+}
+section.blogPost 
+{
+    overflow:hidden;
 }
 section.blogPost article {
 margin-left:50px;
+}
+section#right-sidebar 
+{
+    width:150px;
+    float:right;
+    margin-top:60px;
 }
 section h2 {
 	font-size:45px;
@@ -80,31 +91,37 @@ a.previous
 }
 #icons 
 {
-    top:10px;
-    right:20px;
-    text-align:right;
-    position:absolute;
+    text-align:left;
     padding:0;
     margin:0;
-    width:200px;
 }
 #icons  li
 {
-    display:inline;
-    margin-left:10px;
+    display:block;
+    height:39px;
+    margin-bottom:5px;
+    position:relative;
+    z-index:1;
     /*position:relative; --- this line isn't necessary, but i was fiddling around 
                             and this element causes an error in Chrome 12 when i 
                             click on the img to reveal the div... an "Aw Snap" error. */
 }
-.clickit
+#icons li > a
 {
-     width:50px;
-    cursor:pointer;
-     margin-right:10px; 
+    margin-right:10px; 
+    font-size:14px;
+    color:#444;
+}
+#icons li > a img 
+{
+    width:30px;
+    vertical-align:bottom;
+    margin-right:5px;
 }
 #icons input { width:200px;}
 #icons div.dropdown 
 {
+    top:50px;
      display:none; 
      border-radius:4px;
      text-align:center;
@@ -112,17 +129,41 @@ a.previous
      right:5px;
      background-color:#fff;
      border:1px solid #ccc;
-     box-shadow:0 0 10px #999;
+     width:210px;
+     z-index:2;
+     padding:5px;
+}
+#icons div.dropdown:after 
+{
+    content:"";
+    position:absolute;
+    top:-40px;
+    border:20px solid transparent;
+    border-bottom-color:#fff !important;
+    left:90px;
+    z-index:2;
+}
+#icons div.dropdown:before 
+{
+    content:"";
+    position:absolute;
+    top:-42px;
+    border:21px solid transparent;
+    border-bottom-color:#ccc;
+    left:89px;
+    z-index:1;
 }
 #icons .rss 
 {
      background-color:#eee; 
-     padding: 5px 5px 10px 5px;
 }
 #SOActivity 
 {
     text-align:center;
-    padding:10px;
+}
+.so-flair 
+{
+    max-width:208px;
 }
 .mobileSideBar 
 {
@@ -190,19 +231,74 @@ blockquote footer:before
         font-size:30px;
     }
 }
+@media screen and (max-width:1120px) 
+{
+ section#right-sidebar 
+ {
+     width:40px;
+ } 
+ section#posts 
+ {
+     margin-right:50px;
+ }  
+ section#right-sidebar ul#icons li > a span 
+ {
+    display:none;    
+ }
+ section#right-sidebar ul#icons div.dropdown:after 
+    {
+        left:176px;
+    }
+section#right-sidebar ul#icons div.dropdown:before 
+    {
+        left:175px;
+    }
+
+}
+@media screen and (max-width:800px) 
+{
+ section#posts 
+ {
+     margin-top:35px;
+ }
+ section#right-sidebar 
+ {
+     float:none;
+     width:auto;
+     position:absolute;
+     right:5px;
+     top:-35px;
+     margin-top:0;
+ }   
+ section#right-sidebar ul#icons li 
+ {
+     display:inline;
+     margin-right:2px;
+ }
+ section#right-sidebar ul#icons li > a 
+ {
+     margin-right:0;
+ }
+ section#right-sidebar ul#icons div.dropdown 
+ {
+     right:0;
+ }
+}
 @media screen and (max-width:560px) 
 {
+    section#posts 
+    {
+        margin-top:5px;
+    }
+    section#right-sidebar 
+    {
+        top:auto;
+        bottom:25px;
+    }
     section.blogPost h2 
     {
         font-size:25px;
     }
-         #icons 
-     {
-         top:auto;
-         bottom:0;
-         right:0;
-     }
-
 }
 @media screen and (max-width:480px) 
 {

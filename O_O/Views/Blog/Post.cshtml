@@ -21,7 +21,6 @@
             @Html.Raw(Model.content)
         </article>
 </section>
-<div style="clear:both"></div>
 @if (Request.IsAuthenticated) { 
     <div style="margin-left:30px">
 @Html.ActionLink("Edit", "Edit", new { id = Model.id })

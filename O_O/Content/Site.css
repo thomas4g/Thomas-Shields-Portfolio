@@ -4,7 +4,11 @@
 }
 body {
     text-align:center;
-    margin:0 0 10px 0;
+    margin:0 0 0px 0;
+    font-size:15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;	
+     overflow-x:hidden;
+     position:relative;
 }
 a {
     color: #CC3300;
@@ -21,9 +25,6 @@ img
     margin:auto;
     border-left:2px #555 solid;
     border-right:2px #555 solid;
-    font-size:15px;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;	
-    position:relative;
 }
 header, nav, section, article, footer{
     display:block;
@@ -112,10 +113,11 @@ nav {
 }
 #main {
     text-align:left;
-    padding: 20px 10px 50px 10px;
     color:#444;
     margin:0;
     position:relative;
+        padding-bottom:30px;
+
 }
 p {
     padding-left:15px;
@@ -144,15 +146,36 @@ p {
     vertical-align:bottom;
 }
 footer {
-    color:#999;
+    color:#fff;
     font-size:13px;
-    margin-top:50px;
-    margin-bottom:10px;
-    position:absolute;
+    /*margin-top:50px;
+    margin-bottom:10px;*/
+    margin-top:-30px;
+    position:relative;
     width:100%;
-    left:0;
+    min-height:30px;
+    line-height:30px;
+    background-color:#930;
+}
+footer a { color: #eee; }
+footer:before, footer:after 
+{
+    content:"";
+    position:absolute;
+    height:30px;
+    width:9999px;
+    background-color:#930;
     bottom:0;
 }
+footer:before 
+{
+    left:-9999px;
+}
+footer:after 
+{
+    right:-9999px;
+}
+
 .input-validation-error 
 {
     background-color: #FFCECE;
@@ -251,7 +274,7 @@ blockquote:before
          margin:0;
          border:none;
      }  
-   
+    
 }
 @media screen and (max-width:560px) 
 {
@@ -259,6 +282,11 @@ blockquote:before
      {
          font-size:19px;
      }
+    footer 
+     {
+         position:static;
+     }
+
 }
 @media screen and (max-width:480px) 
 {
@@ -282,4 +310,5 @@ blockquote:before
 #blockWrapper 
 {
     text-align:center;
+    margin: 20px 10px 50px 10px;
 }
