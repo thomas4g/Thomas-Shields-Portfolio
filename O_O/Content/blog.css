@@ -1,20 +1,22 @@
 ﻿section#posts 
 {
-    margin:20px 150px 0 0px;
+    margin:10px 150px 0 0px;
 }
 section.blogPost 
 {
-    padding-left:20px;
+    padding-left:10px;
     overflow:hidden;
 }
 section.blogPost article {
 margin-left:50px;
+padding-left:15px;
 }
 section#right-sidebar 
 {
     width:150px;
     float:right;
     margin-top:60px;
+    margin-right:-10px;
 }
 section h2 {
 	font-size:45px;
