@@ -1,9 +1,10 @@
 ﻿section#posts 
 {
-    margin:20px 150px 0 20px;
+    margin:20px 150px 0 0px;
 }
 section.blogPost 
 {
+    padding-left:20px;
     overflow:hidden;
 }
 section.blogPost article {
