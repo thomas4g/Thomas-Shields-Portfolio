@@ -93,6 +93,7 @@
     <Compile Include="Models\comment.cs" />
     <Compile Include="Models\post.cs" />
     <Compile Include="Models\PostContext.cs" />
+    <Compile Include="Models\quote.cs" />
     <Compile Include="Models\StackOverflowItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

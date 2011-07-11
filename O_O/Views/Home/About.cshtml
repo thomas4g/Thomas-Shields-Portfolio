@@ -5,22 +5,25 @@
 <style type="text/css">
 .mePic 
 {
-    width:150px; float:left; margin-right:10px;
+    width:150px; float:left; margin-right:10px; margin-left:10px;
 }
 section.about 
 {
     display:block;
-    margin-left:160px;
+    margin-left:180px;
+}
+li 
+{
+    max-width:600px;
 }
 </style>
 }
-<h3>About Me</h3>
     <img alt="a picture of me" title="A picture of me" src="http://www.gravatar.com/avatar/@ViewBag.EmailHash?s=200" class="mePic"/>
     <section class="about">
-        I am
+        I am...
         <ul>
             <li>Thomas Shields</li>
-            <li>@((DateTime.Now - new DateTime(1994,7,12)).Days/365) years old</li>
+            <li>@(Math.Floor((double)(DateTime.Now - new DateTime(1994,7,12)).Days/365.25)) years old</li>
             <li>Homeschooled</li>
             <li>A Reformed Christian: saved by grace through faith in my Lord Jesus Christ</li>
             <li>A future Pastor wannabe</li>
@@ -29,11 +32,14 @@ section.about
             <li>A future web design startup wannabe. I just hope I don’t become <a href="http://www.youtube.com/watch?v=LMmdl4VltD4&amp;feature=related">these guys</a></li>
             <li>A lover of and worker with: HTML, CSS, JavaScript, C#, ASP.NET MVC</li>
             <li>A lover of good design</li>
+            <li>Not yet a web design company, but I'd love to help if you're interested. Just <a href="mailto:thomasshields@live.com">drop me a note</a></li>
         </ul>
         This website is...
         <ul>
             <li>Inspired by Robby Ingebretsen's <a href="http://nerdplusart.com">Nerd Plus Art</a></li>
-            <li>&copy; Copyright @DateTime.Now.Year Thomas Shields</li>
+            <li>&copy; Copyright @DateTime.Now.Year Thomas Shields <br />
+            Code snippets not marked otherwise are free to use any way you like as long as you don't try to pass it off as your own. (You don't have to mention me, though. Just no "Look at this awesome code I wrote!")
+            </li>
             <li>Built on ASP.NET MVC 3</li>
             <li>Uses semantic HTML5 markup and a <a href="http://en.wikipedia.org/wiki/Progressive_Enhancement">Progressive Enhancement</a> approach to design</li>
             <li>Still in the works: <a href="mailto:thomasshields@live.com">shoot me an email</a> if you find a bug or have any suggestions</li>
