@@ -495,6 +495,8 @@
     <None Include="Scripts\tinymce\examples\media\sample.ram" />
     <None Include="Scripts\tinymce\examples\media\sample.rm" />
     <Content Include="Views\Blog\StackOverflow.cshtml" />
+    <Content Include="Views\Quotes\Create.cshtml" />
+    <Content Include="Views\Quotes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

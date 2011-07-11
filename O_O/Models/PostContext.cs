@@ -15,6 +15,5 @@ namespace O_O.Models
 
         public DbSet<post> posts { get; set; }
         public DbSet<comment> comments { get; set; }
-
     }
 }

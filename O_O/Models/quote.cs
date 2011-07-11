@@ -11,6 +11,7 @@ namespace O_O.Models
         {
             Theology, Design, Code, Other
         }
+        public int id { get; set; }
         public string body { get; set; }
         public string author { get; set; }
         public QuoteType type { get; set; }
