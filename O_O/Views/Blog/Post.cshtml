@@ -16,7 +16,7 @@
                 }
             </a></span></div>
             <a href="@Url.Action("Tag",new {id=Model.tag })"><img class="tag" src=@(Url.Content("~/Content/images/" + Model.tag + ".png")) title="This post is about @(Model.tag)"></a>
-            <div class="g-plusone" data-href="@Url.Action("Post",new {id = Model.id})" data-size="tall" data-count="true"></div>
+            <div class="g-plusone" data-href="http://@Request.Url.Host/Post/@Model.id" data-size="tall" data-count="true"></div>
         </div>
         <article>
             @Html.Raw(Model.content)
