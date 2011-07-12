@@ -23,7 +23,7 @@ li
         I am...
         <ul>
             <li>Thomas Shields</li>
-            <li>@(Math.Floor((double)(DateTime.Now - new DateTime(1994,7,12)).Days/365.25)) years old</li>
+            <li>@(Math.Floor((double)(DateTime.Now.ToUniversalTime() - new DateTime(1994,7,12).ToUniversalTime()).TotalDays/365.25)) years old</li>
             <li>Homeschooled</li>
             <li>A Reformed Christian: saved by grace through faith in my Lord Jesus Christ</li>
             <li>A future Pastor wannabe</li>
