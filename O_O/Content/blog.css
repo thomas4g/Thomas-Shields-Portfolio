@@ -19,58 +19,70 @@ section#right-sidebar
     margin-right:-10px;
 }
 section h2 {
-	font-size:45px;
-	text-shadow: #999 0 0 1px;
-	display:block;
-	margin-top:5px;
-	margin-bottom:15px;
+    font-size:45px;
+    text-shadow: #999 0 0 1px;
+    display:block;
+    margin-top:5px;
+    margin-bottom:15px;
 }
 .sidebar {
-	float:left;
-	width:4%;
-	min-width:50px;
-	max-width:50px;
+    float:left;
+    width:4%;
+    min-width:50px;
+    max-width:50px;
 }
 .sidebar .postDate {
 text-shadow: #fff 0 0 .04em;
-	width:100%;
-	background-repeat:no-repeat;
-	font-size:30px;
-	color:white;
-	text-align:center;
-	margin-bottom:4px;
-	background-color:#ccc;
-	border-radius:5px;
-	font-family:"Century Gothic", Arial;
+    width:100%;
+    background-repeat:no-repeat;
+    font-size:30px;
+    color:white;
+    text-align:center;
+    margin-bottom:4px;
+    background-color:#ccc;
+    border-radius:5px;
+    font-family:"Century Gothic", Arial;
 }
 .sidebar .postDate .day  {
     line-height:30px;
     font-size:30px;
-	display:block;
-	padding-bottom:1px;
+    display:block;
+    padding-bottom:1px;
 }
 .sidebar .postDate .month {
-	font-size:14px;
-	border-radius:5px 5px 0 0;
-	padding:0 1px 0 1px;
-	background-color:#930;
-	display:block;
+    font-size:14px;
+    border-radius:5px 5px 0 0;
+    padding:0 1px 0 1px;
+    background-color:#930;
+    display:block;
+}
+.sidebar .postDate .year 
+{
+    display:none;
 }
 .sidebar .comments {
-	width:100%;
-	height:40px;
-	color:#222;
-	text-shadow:#222 0 0 1px;
-	text-align:center;
-	padding-top:10px;
-	font-weight:bold;
-	background-image: url("../Content/images/comments.png");
-	background-repeat:no-repeat;
-	font-size:20px;
+    width:100%;
+    height:40px;
+    color:#222;
+    text-shadow:#222 0 0 1px;
+    text-align:center;
+    padding-top:10px;
+    font-weight:bold;
+    background-image: url("../Content/images/comments.png");
+    background-repeat:no-repeat;
+    font-size:20px;
 }
 .sidebar .comments a { width:100%; color: #222 }
+.sidebar .comments .comments-text 
+{
+    display:none;
+}
 .sidebar img {
-	width:100%;
+    width:100%;
+}
+.sidebar span.tag-name 
+{
+    display:none;
 }
 a.next 
 {
@@ -269,7 +281,7 @@ section#right-sidebar ul#icons div.dropdown:before
      width:auto;
      position:absolute;
      right:5px;
-     top:-35px;
+     top:0px;
      margin-top:0;
  }   
  section#right-sidebar ul#icons li 
@@ -288,14 +300,26 @@ section#right-sidebar ul#icons div.dropdown:before
 }
 @media screen and (max-width:560px) 
 {
+    table 
+    {
+        table-layout:fixed;
+        width:100%;
+        font-size:13px;
+    }
     section#posts 
     {
-        margin-top:5px;
+        margin:5px 5px 0 5px;        
     }
+    div#main 
+    {
+        padding:0;
+    }
+    blockquote { margin-right:5px;}
     section#right-sidebar 
     {
         top:auto;
         bottom:35px;
+        right:10px;
     }
     section.blogPost h2 
     {
@@ -310,8 +334,49 @@ section#right-sidebar ul#icons div.dropdown:before
      }
      div.sidebar 
      {
+         display:block;
+         float:none;
+         width: auto;
+         min-width:0;
+         max-width:100%;
+     }
+    section#posts section.blogPost { padding:0 0 0 5px;}
+    section#posts section.blogPost article { padding:0; }
+     div.sidebar div.postDate, div.sidebar div.comments
+     {
+         text-shadow:none;
+         width:auto;
+         color:#444;
+         font-size:15px;
+         text-align:left;
+         display:inline;
+         height:auto;
+         padding:0;
+         margin:0;
+         font-weight:normal;
+         background-color:transparent;
+         background-image:none;
+         padding-left:5px;
+         border-radius:0;
+         border-right: 1px solid #444;
+     }
+     div.sidebar div.comments a { color:#c30;}
+     div.sidebar div.postDate span.month, div.sidebar div.postDate span.day, div.sidebar div.postDate span.year
+     {
+         background-color:transparent;
+         padding:0;
+         display:inline;
+         font-size:15px;
+         line-height:normal;
+         font-family:Trebuchet MS;
+     }
+     div.sidebar div.comments .comments-text { display:inline; }
+     div.sidebar img.tag-image 
+     {
          display:none;
      }
+     div.sidebar span.tag-name { padding-left:5px; display:inline;}
+     div.comments ~ a ~ div { display:none !important; }
      section.blogPost article 
      {
          margin:0;
@@ -322,9 +387,5 @@ section#right-sidebar ul#icons div.dropdown:before
          font-size:30px;
          text-shadow:none;
      }
-     .mobileSideBar 
-    {
-        display:block;
-    }
 
 }
