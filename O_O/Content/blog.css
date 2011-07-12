@@ -340,8 +340,8 @@ section#right-sidebar ul#icons div.dropdown:before
          min-width:0;
          max-width:100%;
      }
-    section#posts section.blogPost { padding:0 0 0 5px;}
-    section#posts section.blogPost article { padding:0; }
+    section.blogPost { padding:0 0 0 5px;}
+    section.blogPost article { padding:0; }
      div.sidebar div.postDate, div.sidebar div.comments
      {
          text-shadow:none;
