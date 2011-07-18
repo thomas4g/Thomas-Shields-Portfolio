@@ -13,8 +13,8 @@ namespace O_O.Content.Extensions
             item.Attributes.Add("href", "/" + controller + "/" + action);
             if (controller == "About")
             {
-                controller = "Home";
                 action = controller;
+                controller = "Home";
             }
             var currAction = (string)htmlHelper.ViewContext.RouteData.Values["action"];
             var currContr = (string)htmlHelper.ViewContext.RouteData.Values["controller"];

@@ -1,4 +1,9 @@
-﻿.block 
+﻿h1 
+{
+    display:inline;
+    zoom:1;
+}
+.block 
 {
     display:inline;
     zoom:1;

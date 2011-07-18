@@ -9,6 +9,16 @@ body {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;	
     position:relative;
 }
+#page 
+{
+    min-height: 100%;
+    width: 85%;
+    margin: auto;
+    border-left: 2px #555 solid;
+    border-right: 2px #555 solid;
+    position: relative;
+    z-index: 1;
+}
 a {
     color: #CC3300;
     text-decoration:none;
@@ -18,36 +28,31 @@ img
     border:none;
     max-width:100%;
 }
-#page {
-    min-height:100%;
-    width:85%;
-    margin:auto;
-    border-left:2px #555 solid;
-    border-right:2px #555 solid;
-    position:relative;
-    z-index:1;
-}
 header, nav, section, article, footer{
     display:block;
 }
 header {
     text-align:left;
-    border-bottom:10px #993300 solid;
-    overflow:auto;
 }
-h1 {
-    font-size:70px;
-    margin:0 30px 0 20px;
-    text-shadow: #999 0 0 2px;
-    font-family:"Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    float:left;
-}
-.description 
+header:before, header:after 
 {
-    font-size:20px;
-    color:#999;
-    text-shadow: #999 0 0 1px;
-    font-weight:normal;
+    content:"";
+    display:table;
+}
+header:after 
+{
+    clear:both;
+}
+h1 
+{
+    display:inline-block;
+    margin:0;
+    padding:0;
+}
+h1 img 
+{
+    height:110px;
+    padding:10px 5px 0 5px;
 }
 h2 
 {
@@ -73,44 +78,46 @@ h4
     font-weight:normal;
     margin: 5px 0 5px 0px;
 }
-
-.brackets {
-    font-size:60px;
-    color:#444;
-    text-shadow: #555 0 0 1px;
-    vertical-align:middle;
-
+nav {
+    text-align:center;
+    float:right;
+    margin-top:90px;
+    margin-right:30px;
 }
 ul#nav {
-    padding:0;margin:0;
-    display:inline;
-    vertical-align:-5px;
+    padding:0;
+    margin:0;
+    display:block;
+    font-size:0;
 }
 ul#nav li {
     list-style:none;
     display:inline;
+    padding:0;
 }
 ul#nav li a {
-    color:#666;
+    color:#fff;
     text-decoration:none;
-    text-shadow: #666 0 0 1px;
-    font-family:Consolas,monospace;
-    padding:0;
+    text-shadow: #999 0 0 1px;
+    font-family:Consolas, monospace;
+    padding:0 50px;
     font-size:25px;
+    border-right:1px solid #777;
+    background-color:#999;
 }
 ul#nav li a.selected {
-    color: #CC3300;
-    text-shadow: #cc3300 0 0 1px;
+    background-color:#930;
 }
-
+ul#nav li a.selected:hover 
+{
+    background-color:#999;
+}
 ul#nav li a:hover {
-    color: #CC3300;
-    text-shadow: #cc3300 0 0 1px;
+    color: #F10;
 }
-nav {
-    text-align:center;
-    float:right;
-    margin-top:30px;
+ul#nav li:last-child a 
+{
+    border-right:0;
 }
 #main {
     text-align:left;
@@ -210,6 +217,42 @@ blockquote:before
     float:left;
     font-weight:bold;
 }
+blockquote.bubble 
+{
+    padding:15px;
+    background-color:#eee;
+    border:none;
+    max-width:700px;
+    border-radius:20px;
+    position:relative;
+    margin-bottom:50px;
+    z-index:6;
+    display:inline-block;
+    font-size:14px;
+    font-family:inherit Sans-Serif;
+    position:relative;
+}
+blockquote.bubble footer 
+{
+    position:absolute;
+    top:100%;
+    right:95px;
+    margin-top:5px;
+    font-style:italic;
+    color:#999;
+}
+blockquote.bubble:before
+{
+    content:"";
+    position:absolute;
+    top:100%;
+    margin-top:-40px;
+    border:35px solid transparent;
+    border-left:45px solid #eee;
+    display:block;
+    z-index:-1;
+    right:0px;
+}
 table 
 {
     border-spacing:0;
@@ -224,35 +267,41 @@ tr:nth-child(odd)
 }
 @media screen and (max-width:1170px) 
 {
- header h1 
+h1 
  {
      margin:0;
  }   
 }
 @media screen and (max-width:1120px) 
 {
-    .brackets 
-     {
-         display:none;
-     } 
     nav 
      {
-         margin:55px 10px 0 0;
+        margin-right:10px;        
      }
 
 }
-@media screen and (max-width:1035px) 
+@media screen and (max-width:1100px) 
 {
+    header 
+    {
+        text-align:center;
+    }
      ul#nav li a
      {
-         font-size:20px;
+         padding:5px 40px;
      }
-     nav { margin-top:60px; }
-     header h1 span.description { font-size: 16px }
-}
-@media screen and (max-width:920px) 
-{
-    header h1 span.description { display:none }
+     h1 
+     {
+         display:block;
+         margin-bottom:10px;
+         text-align:center;
+     }
+    nav 
+    {
+        float:none;
+        display:inline-block;
+        margin:0 auto;
+    }
 }
 @media screen and (max-width:800px) 
 {
@@ -274,22 +323,19 @@ tr:nth-child(odd)
 }
 @media screen and (max-width:480px) 
 {
-     header 
-     {
-         text-align:center;
-     }   
-     header h1 
-     {
-         margin:0;
-         float:none;
-     }
-     
-     header nav 
-     {
-         margin:0;
-         float:none;
-         display:block;
-     }
+     header h1 img 
+    {
+        width:320px;
+        max-width:320px;
+        height:auto;
+       margin:0;
+       padding:0;
+    }
+    header nav ul#nav li a 
+    {
+        padding:0 10px;
+    }
+   
 }
 #blockWrapper 
 {

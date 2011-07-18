@@ -3,11 +3,11 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="description" content="O_O - A Weblog of Object-Oriented Programming and Startling Web Design. The personal blog of Thomas Shields with code snippets, design wrangling, and theological essays" />
+    <meta name="description" content="Thomas Shields Web Design - The personal blog of Thomas Shields with code snippets, design wrangling, and theological essays" />
     <meta name="keywords" content="Web Design, Web Developement, Design, Development, OOP, HTML, CSS, JavaScript, HTML5, CSS3, Theology, Essays" />
     <meta name="author" content="Thomas Shields" />
     <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title | O_O</title>
+    <title>@ViewBag.Title | Thomas Shields Web Design</title>
     <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
     <!--[if lt IE 8]>
         <link href="@Url.Content("~/Content/IE.css")" rel="stylesheet" type="text/css"/>
@@ -33,31 +33,27 @@
     @RenderSection("head", false)
 </head>
 <body>
-    <div id="page">
     <!--[if lt IE 7]>
-    <center>
-     <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div></center> 
+        <div style='clear: both; left:20%;height: 59px; padding:0 0 0 15px; position: absolute;top:85px;margin:0 auto;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div>
     <![endif]-->
     <!--[if lt IE 9]>
-        <noscript style="display:block; margin:0 auto; font-size:30px; color:red; background-color:#eee;">
+        <noscript style="display:block; margin:0 auto; font-size:30px; color:red; background-color:#eee; position:absolute; top:0;">
         <div style="padding:5px;">
         Since you're using an old browser, scripting is required to display this website correctly. Please turn on JavaScript or unblock this website's scripts
         </div>
         </noscript>
     <![endif]-->
+
+    <div id="page">
         <header>
-                    <h1>O_O <span class="description">A Weblog of OOP & Startling Web Design</span></h1>
+                    <h1><img src="@Url.Content("~/Content/Images/logo.png")" alt="Thomas Shields Web Design: Personal Weblog" /></h1>
 
             <nav>
-                <span class="brackets">{</span>
                 <ul id="nav">
                     <li>@Html.MenuItem("Home","Index","Home")</li>
-                    <li>/</li>
                     <li>@Html.MenuItem("Blog", "Index","Blog")</li>
-                    <li>/</li>
                     <li>@Html.MenuItem("About","","About")</li>
                 </ul>
-                <span class="brackets">}</span>
             </nav>
         </header>
         <div id="main">
