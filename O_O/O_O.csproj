@@ -124,6 +124,7 @@
     <Content Include="bin\x86\sqlcese40.dll" />
     <Content Include="Content\blog.css" />
     <Content Include="Content\IE.css" />
+    <Content Include="Content\Images\logo.png" />
     <Content Include="Content\mobile.css" />
     <Content Include="Content\Images\calendar.png" />
     <Content Include="Content\Images\code.png" />
