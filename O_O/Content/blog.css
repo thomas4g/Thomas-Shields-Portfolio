@@ -385,7 +385,6 @@ div.sidebar img.tag-image
 display:none;
 }
 div.sidebar span.tag-name { padding-left:5px; display:inline;}
-div.comments ~ a ~ div { display:none !important; }
 section.blogPost article 
 {
 margin:0;

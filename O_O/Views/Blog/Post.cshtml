@@ -1,34 +1,33 @@
 ﻿@model O_O.Models.post
 @{
-    string[] months = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
+string[] months = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
 }
 <section class="blogPost">
-        <h2>@(Html.ActionLink(Model.title,"Post",new {id = Model.id}))</h2>
-        <div class="sidebar">
-            <div class="postDate">
-            <span class="month">@(months[Model.date.Month - 1])</span>
-            <span class="day">@Model.date.Day</span><span class="year">, @Model.date.Year</span>
-            </div>
-            <div class="comments">
-            <a href="@(Url.Action("Post",new {id=Model.id}))#comments">
-            @if(Model.comments != null) {
-                <text>@(Model.comments.Count)</text>
-                }
-                else {
-                    <text>0</text>
-                }
-                <span class="comments-text"> comments</span>
-            </a>
-            </div>
-            <a href="@Url.Action("Tag",new {id=Model.tag })"><img class="tag-image" src=@(Url.Content("~/Content/images/" + Model.tag + ".png")) title="This post is about @(Model.tag)"><span class="tag-name">@Model.tag</span></a>
-            <div class="g-plusone" data-href="http://@Request.Url.Host/Blog/Post/@Model.id" data-size="tall" data-count="true"></div>
-        </div>
-        <article>
-            @Html.Raw(Model.content)
-        </article>
+<h2>@(Html.ActionLink(Model.title,"Post",new {id = Model.id}))</h2>
+<div class="sidebar">
+<div class="postDate">
+<span class="month">@(months[Model.date.Month - 1])</span>
+<span class="day">@Model.date.Day</span><span class="year">, @Model.date.Year</span>
+</div>
+<div class="comments">
+<a href="@(Url.Action("Post",new {id=Model.id}))#comments">
+@if(Model.comments != null) {
+<text>@(Model.comments.Count)</text>
+}
+else {
+<text>0</text>
+}
+<span class="comments-text"> comments</span>
+</a>
+</div>
+<a href="@Url.Action("Tag",new {id=Model.tag })"><img class="tag-image" src=@(Url.Content("~/Content/images/" + Model.tag + ".png")) title="This post is about @(Model.tag)"><span class="tag-name">@Model.tag</span></a>
+</div>
+<article>
+@Html.Raw(Model.content)
+</article>
 </section>
 @if (Request.IsAuthenticated) { 
-    <div style="margin-left:30px">
+<div style="margin-left:30px">
 @Html.ActionLink("Edit", "Edit", new { id = Model.id })
 <br />
 @Html.ActionLink("Delete", "Delete", new { id = Model.id })
