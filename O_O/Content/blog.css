@@ -1,408 +1,79 @@
-﻿h2 
-{
-font-weight:normal;
-}
-h2 a 
-{
-color:#999;
-}
-
-section#posts 
-{
-margin:10px 150px 0 0px;
-}
-section.blogPost 
-{
-padding-left:10px;
-overflow:hidden;
-}
-section.blogPost article {
-margin-left:50px;
-padding-left:15px;
-}
-#right-sidebar 
-{
-width:150px;
-float:right;
-margin-top:60px;
-margin-right:-10px;
-}
-section h2 {
-font-size:45px;
-text-shadow: #fff 0 0 1px;
-display:block;
-margin-top:5px;
-margin-bottom:15px;
-}
-.sidebar {
-float:left;
-width:4%;
-min-width:50px;
-max-width:50px;
-}
-.postDate {
-text-shadow: #ccc 0 0 1px;
-width:100%;
-background-repeat:no-repeat;
-font-size:30px;
-color:white;
-text-align:center;
-margin-bottom:4px;
-background-color:#ccc;
-border-radius:5px;
-font-family:"Century Gothic", Arial;
-}
-.day  {
-line-height:30px;
-font-size:30px;
-display:block;
-padding-bottom:1px;
-}
-.month {
-font-size:14px;
-text-shadow:none;
-border-radius:5px 5px 0 0;
-padding:0 1px 0 1px;
-background-color:#930;
-display:block;
-}
-.year 
-{
-display:none;
-}
-.comments {
-width:100%;
-height:40px;
-color:#222;
-text-shadow:none;
-text-align:center;
-padding-top:10px;
-background-image: url("../Content/images/comments.png");
-background-repeat:no-repeat;
-font-size:20px;
-}
-.comments a { width:100%; color: #222 }
-.comments-text 
-{
-display:none;
-}
-.tag-image 
-{
-width:50px;
-height:50px;
-}
-.tag-name 
-{
-display:none;
-}
-a.next 
-{
-float:right;
-}
-a.previous 
-{
-float:left;
-}
-#comments 
-{
-margin-left:80px;
-margin-top:40px;
-}
-
-.addComment {margin: 20px 40px 0 40px; text-align:left;}
-.comment-container 
-{
-margin:20px 130px 0 0;
-border-bottom:1px dotted #ccc;   
-}
-#icons 
-{
-text-align:left;
-padding:0;
-margin:0;
-}
-#icons  li
-{
-display:block;
-height:39px;
-margin-bottom:5px;
-position:relative;
-z-index:1;
-/*position:relative; --- this line isn't necessary, but i was fiddling around 
-        and this element causes an error in Chrome 12 when i 
-        click on the img to reveal the div... an "Aw Snap" error. */
-}
-#icons li > a
-{
-margin-right:10px; 
-font-size:14px;
-color:#444;
-}
-#icons li > a img 
-{
-width:30px;
-vertical-align:bottom;
-margin-right:5px;
-}
-.rss-img 
-{
-height:36px;
-}
-.so-img, .git-img
-{
-height:42px;
-}
-#icons input { width:200px;}
-#icons div.dropdown 
-{
-top:50px;
-display:none; 
-border-radius:4px;
-text-align:center;
-position:absolute;
-right:5px;
-background-color:#fff;
-border:1px solid #ccc;
-width:210px;
-z-index:2;
-padding:5px;
-}
-#icons div.dropdown:after 
-{
-content:"";
-position:absolute;
-top:-40px;
-border:20px solid transparent;
-border-bottom-color:#fff !important;
-left:90px;
-z-index:2;
-}
-#icons div.dropdown:before 
-{
-content:"";
-position:absolute;
-top:-42px;
-border:21px solid transparent;
-border-bottom-color:#ccc;
-left:89px;
-z-index:1;
-}
-#icons .rss 
-{
-background-color:#eee; 
-}
-#SOActivity 
-{
-text-align:center;
-}
-.so-flair 
-{
-max-width:208px;
-}
-.mobileSideBar 
-{
-display:none;
-}
-code
-{
-font-family: Consolas, "Courier New", "Courier", Serif;
-background-color:#eee;
-padding:1px 2px;
-color:#222;
-}
-code.full 
-{
-display:block;
-margin:4px;
-}
-pre 
-{
-margin-left:15px;
-}
-article 
-{
-font-family:"Segoe UI", Calibri, "Lucida Sans-Serif";
-color:#444;
-}
-.container 
-{
-border-radius:10px;
-border:1px solid #888;
-padding:20px;
-}
-blockquote.comment 
-{
-margin:20px 100px 0 0;
-padding-right:20px;
-font-family: "Segoe UI", Calibri, Sans-Serif;
-}
-blockquote footer 
-{
-position:static;
-margin:5px 0 0 0;
-color:#000;
-background-repeat:no-repeat;
-padding:0px 0 0px 50px;
-height:40px;
-}
-.comment-author 
-{
-font-size:14px;
-}
-.comment-date
-{
-display:block;
-color:#555;
-}
-blockquote footer:before 
-{
-}
-@media screen and (max-width:1045px) 
-{
-section.blogPost h2 
-{
-font-size:30px;
-}
-}
-@media screen and (max-width:1120px) 
-{
-section#right-sidebar 
-{
-width:40px;
-} 
-section#posts 
-{
-margin-right:50px;
-}  
-#icons li > a span 
-{
-display:none;    
-}
-#icons div.dropdown:after 
-{
-left:176px;
-}
-#icons div.dropdown:before 
-{
-left:175px;
-}
-
-}
-@media screen and (max-width:800px) 
-{
-#posts 
-{
-margin-top:35px;
-}
-#right-sidebar 
-{
-float:none;
-width:auto;
-position:absolute;
-right:5px;
-top:0px;
-margin-top:0;
-}   
-#icons li 
-{
-display:inline;
-margin-right:2px;
-}
-#icons li > a 
-{
-margin-right:0;
-}
-#icons div.dropdown 
-{
-right:0;
-}
-}
-@media screen and (max-width:560px) 
-{
-table 
-{
-table-layout:fixed;
-width:100%;
-font-size:13px;
-}
-section#posts 
-{
-margin:5px 5px 0 5px;        
-}
-#main 
-{
-padding:0;
-}
-blockquote { margin-right:5px;}
-#right-sidebar 
-{
-top:auto;
-bottom:35px;
-right:10px;
-}
-section.blogPost h2 
-{
-font-size:25px;
-}
-}
-@media screen and (max-width:480px) 
-{
-section.blogPost 
-{
-margin:0;
-}
-div.sidebar 
-{
-display:block;
-float:none;
-width: auto;
-min-width:0;
-max-width:100%;
-}
-section.blogPost { padding:0 0 0 5px;}
-section.blogPost article { padding:0; }
-div.sidebar div.postDate, div.sidebar div.comments
-{
-text-shadow:none;
-width:auto;
-color:#444;
-font-size:15px;
-text-align:left;
-display:inline;
-height:auto;
-padding:0;
-margin:0;
-font-weight:normal;
-background-color:transparent;
-background-image:none;
-padding-left:5px;
-border-radius:0;
-border-right: 1px solid #444;
-}
-div.sidebar div.comments a { color:#c30;}
-div.sidebar div.postDate span.month, div.sidebar div.postDate span.day, div.sidebar div.postDate span.year
-{
-background-color:transparent;
-padding:0;
-display:inline;
-font-size:15px;
-line-height:normal;
-font-family:Trebuchet MS;
-}
-div.sidebar div.comments .comments-text { display:inline; }
-div.sidebar img.tag-image 
-{
-display:none;
-}
-div.sidebar span.tag-name { padding-left:5px; display:inline;}
-section.blogPost article 
-{
-margin:0;
-font-size:20px;
-}
-section.blogPost h2 
-{
-font-size:30px;
-text-shadow:none;
-}
+﻿h2{font-weight:normal;}
+h2 a{color:#999;}
+section#posts{margin:10px 150px 0 0px;}
+section.blogPost{padding-left:10px;overflow:hidden;}
+section.blogPost article{margin-left:50px;padding-left:15px;}
+#right-sidebar{width:150px;float:right;margin-top:60px;margin-right:-10px;}
+section h2{font-size:45px;text-shadow:#fff 0 0 1px;display:block;margin-top:5px;margin-bottom:15px;}
+.sidebar{float:left;width:4%;min-width:50px;max-width:50px;}
+.postDate{text-shadow:#ccc 0 0 1px;width:100%;background-repeat:no-repeat;font-size:30px;color:white;text-align:center;margin-bottom:4px;background-color:#ccc;border-radius:5px;font-family:"Century Gothic", Arial;}
+.day{line-height:30px;font-size:30px;display:block;padding-bottom:1px;}
+.month{font-size:14px;text-shadow:none;border-radius:5px 5px 0 0;padding:0 1px 0 1px;background-color:#930;display:block;}
+.year{display:none;}
+.comments{width:100%;height:40px;color:#222;text-shadow:none;text-align:center;padding-top:10px;background-image:url("../Content/images/comments.png");background-repeat:no-repeat;font-size:20px;}
+.comments a{width:100%;color:#222}
+.comments-text{display:none;}
+.tag-image{width:50px;height:50px;}
+.tag-name{display:none;}
+a.next{float:right;}
+a.previous{float:left;}
+#comments{margin-left:80px;margin-top:40px;}
+.addComment{margin:20px 40px 0 40px;text-align:left;}
+.comment-container{margin:20px 130px 0 0;border-bottom:1px dotted #ccc;}
+#icons{text-align:left;padding:0;margin:0;}
+#icons li{display:block;height:39px;margin-bottom:5px;position:relative;z-index:1;}
+#icons li > a{margin-right:10px;font-size:14px;color:#444;}
+#icons li > a img{width:30px;vertical-align:bottom;margin-right:5px;}
+.rss-img{height:36px;}
+.so-img, .git-img{height:42px;}
+#icons input{width:200px;}
+#icons div.dropdown{top:50px;display:none;border-radius:4px;text-align:center;position:absolute;right:5px;background-color:#fff;border:1px solid #ccc;width:210px;z-index:2;padding:5px;}
+#icons div.dropdown:after{content:"";position:absolute;top:-40px;border:20px solid transparent;border-bottom-color:#fff !important;left:90px;z-index:2;}
+#icons div.dropdown:before{content:"";position:absolute;top:-42px;border:21px solid transparent;border-bottom-color:#ccc;left:89px;z-index:1;}
+#icons .rss{background-color:#eee;}
+#SOActivity{text-align:center;}
+.so-flair{max-width:208px;}
+code{font-family:Consolas, "Courier New", "Courier", Serif;background-color:#eee;padding:1px 2px;color:#222;}
+code.full{display:block;margin:4px;}
+pre{margin-left:15px;}
+article{font-family:"Segoe UI", Calibri, "Lucida Sans-Serif";color:#444;}
+.container{border-radius:10px;border:1px solid #888;padding:20px;}
+blockquote.comment{margin:20px 100px 0 0;padding-right:20px;font-family:"Segoe UI", Calibri, Sans-Serif;}
+blockquote footer{position:static;margin:5px 0 0 0;color:#000;background-repeat:no-repeat;padding:0px 0 0px 50px;height:40px;}
+.comment-author{font-size:14px;}
+.comment-date{display:block;color:#555;}
+blockquote footer:before{}
+@media screen and (max-width:1045px){section.blogPost h2{font-size:30px;}
+}
+@media screen and (max-width:1120px){section#right-sidebar{width:40px;}
+section#posts{margin-right:50px;}
+#icons li > a span{display:none;}
+#icons div.dropdown:after{left:176px;}
+#icons div.dropdown:before{left:175px;}
+}
+@media screen and (max-width:800px){#posts{margin-top:35px;}
+#right-sidebar{float:none;width:auto;position:absolute;right:5px;top:0px;margin-top:0;}
+#icons li{display:inline;margin-right:2px;}
+#icons li > a{margin-right:0;}
+#icons div.dropdown{right:0;}
+}
+@media screen and (max-width:560px){table{table-layout:fixed;width:100%;font-size:13px;}
+section#posts{margin:5px 5px 0 5px;}
+#main{padding:0;}
+blockquote{margin-right:5px;}
+#right-sidebar{top:auto;bottom:35px;right:10px;}
+section.blogPost h2{font-size:25px;}
+}
+@media screen and (max-width:480px){section.blogPost{margin:0;}
+div.sidebar{display:block;float:none;width:auto;min-width:0;max-width:100%;}
+section.blogPost{padding:0 0 0 5px;}
+section.blogPost article{padding:0;}
+div.sidebar div.postDate, div.sidebar div.comments{text-shadow:none;width:auto;color:#444;font-size:15px;text-align:left;display:inline;height:auto;padding:0;margin:0;font-weight:normal;background-color:transparent;background-image:none;padding-left:5px;border-radius:0;border-right:1px solid #444;}
+div.sidebar div.comments a{color:#c30;}
+div.sidebar div.postDate span.month, div.sidebar div.postDate span.day, div.sidebar div.postDate span.year{background-color:transparent;padding:0;display:inline;font-size:15px;line-height:normal;font-family:Trebuchet MS;}
+div.sidebar div.comments .comments-text{display:inline;}
+div.sidebar img.tag-image{display:none;}
+div.sidebar span.tag-name{padding-left:5px;display:inline;}
+section.blogPost article{margin:0;font-size:20px;}
+section.blogPost h2{font-size:30px;text-shadow:none;}
 }

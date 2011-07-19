@@ -3,7 +3,49 @@ ViewBag.Title = "Home";
 string[] titles = { "World Wide Web", "Internet", "Interweb", "Intersphere", "Intertubes", "Interblag", "Blogosphere", "Blagonet", "Blagosphere", "Blagoblag", "Webnet", "Webweb" };
 List<O_O.Models.post> latest = ViewBag.latest;
 }
-
+@section head {
+<style type="text/css">
+.block {
+display:inline-block;
+margin: 10px 10px 10px 15px;
+width:300px;
+font-size:13px;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+text-align:left;
+vertical-align:top;
+}
+.block ol { list-style:none; padding:0; margin:0; }
+.block h3 {
+text-align:center;
+font-size:22px;
+text-shadow: #fff 0 0 1px;
+margin:10px 0 0 0;
+padding-right:20px;
+font-family: Impact, Charcoal, Sans-Serif;
+}
+.latest-post-date 
+{
+display:block;
+color:#999;
+font-size:13px;
+text-indent:10px;
+}
+@@media screen and (max-width:560px) 
+{
+.block 
+{
+font-size:19px;
+margin:0;
+}
+.latest-post-date { font-size:15px;}
+}
+#blockWrapper 
+{
+text-align:center;
+margin: 20px 10px 50px 10px;
+}
+</style>
+}
 <div id="blockWrapper">
 <div class="block">
 <h3>Welcome!</h3>
