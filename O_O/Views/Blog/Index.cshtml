@@ -16,7 +16,7 @@ int pageSize = ViewBag.pageSize;
 <ul id="icons">
 <li>
 <a href="http://@Request.Url.Host/Blog/RSS" class="clickit">
-<img alt="rss" title="View My Rss Feed URL" src="@Url.Content("~/Content/Images/rss.png")" />
+<img class="rss-img" alt="rss" title="View My Rss Feed URL" src="@Url.Content("~/Content/Images/rss.png")" />
 <span>Subscribe</span>
 </a>
 <div class="rss dropdown">
@@ -26,7 +26,7 @@ Copy the URL below into your RSS reader <br />
 </li>
 <li>
 <a href="http://stackoverflow.com/users/719312/thomas-shields" class="clickit Stack">
-<img src="@Url.Content("~/Content/Images/so.png")" alt="Stack Overflow Logo" title="View My Stack Overflow Activity" />
+<img class="so-img" src="@Url.Content("~/Content/Images/so.png")" alt="Stack Overflow Logo" title="View My Stack Overflow Activity" />
 <span>Stack Overflow</span>
 </a>
 <div class="dropdown">
@@ -38,7 +38,7 @@ Copy the URL below into your RSS reader <br />
 </li>
 <li>
 <a href="https://github.com/thomas4g">
-<img src="@Url.Content("~/Content/Images/github.png")" alt="Github Logo" title="View My Projects on Github" />
+<img class="git-img" src="@Url.Content("~/Content/Images/github.png")" alt="Github Logo" title="View My Projects on Github" />
 <span>Github</span>
 </a>
 <div class="dropdown">
