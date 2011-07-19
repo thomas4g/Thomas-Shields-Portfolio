@@ -66,14 +66,14 @@ h2, h3, nav, .description {
         font-family:"Courier New", Courier, monospace;
     }
 h3 {
-    text-shadow: #999 0 0 1px;
+    text-shadow: #fff 0 0 1px;
     font-size:22px;
     font-weight:normal;
     margin: 5px 0 5px 30px;
 }
 h4 
 {
-    text-shadow: #999 0 0 1px;
+    text-shadow: #fff 0 0 1px;
     font-size:25px;
     font-weight:normal;
     margin: 5px 0 5px 0px;
@@ -98,19 +98,19 @@ ul#nav li {
 ul#nav li a {
     color:#fff;
     text-decoration:none;
-    text-shadow: #999 0 0 1px;
+    text-shadow: #ccc 0 0 1px;
     font-family:Consolas, monospace;
     padding:0 50px;
     font-size:25px;
     border-right:1px solid #777;
-    background-color:#999;
+    background-color:#ccc;
 }
 ul#nav li a.selected {
     background-color:#930;
 }
 ul#nav li a.selected:hover 
 {
-    background-color:#999;
+    background-color:#cc;
 }
 ul#nav li a:hover {
     color: #F10;
@@ -136,17 +136,25 @@ ul#nav li:last-child a
     text-align:left;
     vertical-align:top;
 }
+.block ol { list-style:none; padding:0; margin:0; }
 .block h3 {
     text-align:center;
     font-size:22px;
-    text-shadow: #999 0 0 1px;
+    text-shadow: #fff 0 0 1px;
     margin:10px 0 0 0;
     padding-right:20px;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-family: Impact, Charcoal, Sans-Serif;
 }
 .block h3 img {
     width:30px;
     vertical-align:bottom;
+}
+.latest-post-date 
+{
+    display:block;
+    color:#999;
+    font-size:13px;
+    text-indent:10px;
 }
 body > footer {
     color:#fff;
@@ -320,6 +328,7 @@ h1
          font-size:19px;
          margin:0;
      }
+     .latest-post-date { font-size:15px;}
 }
 @media screen and (max-width:480px) 
 {

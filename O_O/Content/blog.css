@@ -20,7 +20,7 @@ section#right-sidebar
 }
 section h2 {
     font-size:45px;
-    text-shadow: #999 0 0 1px;
+    text-shadow: #fff 0 0 1px;
     display:block;
     margin-top:5px;
     margin-bottom:15px;
@@ -32,7 +32,7 @@ section h2 {
     max-width:50px;
 }
 .sidebar .postDate {
-text-shadow: #fff 0 0 .04em;
+text-shadow: #ccc 0 0 1px;
     width:100%;
     background-repeat:no-repeat;
     font-size:30px;
@@ -51,6 +51,7 @@ text-shadow: #fff 0 0 .04em;
 }
 .sidebar .postDate .month {
     font-size:14px;
+    text-shadow:none;
     border-radius:5px 5px 0 0;
     padding:0 1px 0 1px;
     background-color:#930;
@@ -64,10 +65,9 @@ text-shadow: #fff 0 0 .04em;
     width:100%;
     height:40px;
     color:#222;
-    text-shadow:#222 0 0 1px;
+    text-shadow:none;
     text-align:center;
     padding-top:10px;
-    font-weight:bold;
     background-image: url("../Content/images/comments.png");
     background-repeat:no-repeat;
     font-size:20px;

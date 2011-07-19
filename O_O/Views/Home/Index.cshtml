@@ -1,18 +1,39 @@
 ﻿@{
     ViewBag.Title = "Home";
+    string[] titles = { "World Wide Web", "Internet", "Interweb", "Intersphere", "Intertubes", "Interblag", "Blogosphere", "Blagonet", "Blagosphere", "Blagoblag", "Webnet", "Webweb" };
+    List<O_O.Models.post> latest = ViewBag.latest;
 }
 
 <div id="blockWrapper">
 <div class="block">
-<h3>Code <img src="@Url.Content("~/Content/Images/code.png")" alt="Angle Brackets, Symbolyzing Code"></h3>
+<h3>Welcome!</h3>
+I'm Thomas Shields, Redeemed &amp; Reformed Christian and avid Coder &amp; Designer of @(Math.Floor((double)(DateTime.Now.ToUniversalTime() - new DateTime(1994,7,12).ToUniversalTime()).TotalDays/365.25)) years. This is my personal space of the <a href="http://xkcd.com/181/">@(titles[new Random().Next(titles.Length)])</a>. Here you'll find my blog posts on theology and Web Design. 
+</div>
+
+<div class="block">
+<h3>Latest</h3>
+<ol>
+    @foreach (O_O.Models.post p in latest)
+    {
+    <li><a href="@Url.Content("/Blog/Post/" + p.id)">@p.title</a><span class="latest-post-date">@(DateStuff.getTimeSpan(p.date))</span></li>
+    }
+</ol>
+
+</div>
+<div class="block">
+<h3>Updates</h3>
+Just finished a logo. What do you think? I've added some blocks here on the home page, and the <a href="@Url.Content("/About")">About page</a> has gotten a makeover. I'm pushing out design tweaks and updates left and right, but I'll try to log my changes. :) Projects and code are posted on <a href="http://github.com/thomas4g">Github</a>, but hopefully I'll have a page for them here soon as well. After I get a few more designs under my belt, I'll post a portfolio page too. :)
+</div> 
+<div class="block">
+<h3>Code</h3>
 I wrote my first code at 14, but in two years I went from thinking passwords could be stored in JS files to using JavaScript, HTML, CSS, and ASP.NET to write powerful web applications. I love logic, I love code, and I love writing Object-Oriented, scalable systems. 
 </div>
 <div class="block">
-<h3>Design <img src="@Url.Content("~/Content/Images/design.png")" alt="Paintbrush, Symbolyzing Design"></h3>
+<h3>Design</h3>
 Let's get one thing straight: I am <em>not</em> an artist. But I love to design - anything from treehouses to future homes to websites, I love taking a good idea and making it real.  HTML, CSS, and JavaScript are music to my ears, and I revel in making beautiful designs with clean markup. 
 </div>
 <div class="block">
-<h3>Theology <img src="@Url.Content("~/Content/Images/theology.png")" alt="Bible, For Theology"></h3>
+<h3>Theology</h3>
 Theology is the study of God. As a sinner saved by grace, a desire to know and glorify the living God should permeate my every thought, word, and action. My faith in Jesus Christ as the Savior of his people can't be divorced from my love for the web. 
 </div>
 </div>
