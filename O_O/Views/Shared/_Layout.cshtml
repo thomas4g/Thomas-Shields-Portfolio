@@ -2,72 +2,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="Thomas Shields Web Design - The personal blog of Thomas Shields with code snippets, design wrangling, and theological essays" />
-    <meta name="keywords" content="Web Design, Web Developement, Design, Development, OOP, HTML, CSS, JavaScript, HTML5, CSS3, Theology, Essays" />
-    <meta name="author" content="Thomas Shields" />
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title | Thomas Shields Web Design</title>
-    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
-    <!--[if lt IE 8]>
-        <link href="@Url.Content("~/Content/IE.css")" rel="stylesheet" type="text/css"/>
-    <![endif]-->
+<meta charset="utf-8" />
+<meta name="description" content="Thomas Shields Web Design - The personal blog of Thomas Shields with code snippets, design wrangling, and theological essays" />
+<meta name="keywords" content="Web Design, Web Developement, Design, Development, OOP, HTML, CSS, JavaScript, HTML5, CSS3, Theology, Essays" />
+<meta name="author" content="Thomas Shields" />
+<meta name="viewport" content="width=device-width" />
+<title>@ViewBag.Title | Thomas Shields Web Design</title>
+<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+<!--[if lt IE 8]>
+<link href="@Url.Content("~/Content/IE.css")" rel="stylesheet" type="text/css"/>
+<![endif]-->
 
-        <script type="text/javascript">
-            //        window.onresize = function (event) {
-            //            document.getElementById("dimensions").innerHTML = "X: " + window.innerWidth + "; Y: " + window.innerHeight;
-            //        }
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-23884364-1']);
-            _gaq.push(['_trackPageview']);
+<script type="text/javascript">
+//window.onresize = function (event) {
+//document.getElementById("dimensions").innerHTML = "X: " + window.innerWidth + "; Y: " + window.innerHeight;
+//}
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-23884364-1']);
+_gaq.push(['_trackPageview']);
 
-            (function () {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
+(function () {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
 
-    </script>
+</script>
 
-    <script src="@Url.Content("~/Scripts/modernizr-1.7.min.js")" type="text/javascript"></script>
-    @RenderSection("head", false)
+<script src="@Url.Content("~/Scripts/modernizr-1.7.min.js")" type="text/javascript"></script>
+@RenderSection("head", false)
 </head>
 <body>
-    <!--[if lt IE 7]>
-        <div style='clear: both; left:20%;height: 59px; padding:0 0 0 15px; position: absolute;top:85px;margin:0 auto;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div>
-    <![endif]-->
-    <!--[if lt IE 9]>
-        <noscript style="display:block; margin:0 auto; font-size:30px; color:red; background-color:#eee; position:absolute; top:0;">
-        <div style="padding:5px;">
-        Since you're using an old browser, scripting is required to display this website correctly. Please turn on JavaScript or unblock this website's scripts
-        </div>
-        </noscript>
-    <![endif]-->
+<!--[if lt IE 7]>
+<div style='clear: both; left:20%;height: 59px; padding:0 0 0 15px; position: absolute;top:85px;margin:0 auto;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div>
+<![endif]-->
+<!--[if lt IE 9]>
+<noscript style="display:block; margin:0 auto; font-size:30px; color:red; background-color:#eee; position:absolute; top:0;">
+<div style="padding:5px;">
+Since you're using an old browser, scripting is required to display this website correctly. Please turn on JavaScript or unblock this website's scripts
+</div>
+</noscript>
+<![endif]-->
 
-    <div id="page">
-        <header>
-                    <h1><img src="@Url.Content("~/Content/Images/logo.png")" alt="Thomas Shields Web Design: Personal Weblog" /></h1>
+<div id="page">
+<header>
+<h1><img src="@Url.Content("~/Content/Images/logo.png")" alt="Thomas Shields Web Design: Personal Weblog" /></h1>
 
-            <nav>
-                <ul id="nav">
-                    <li>@Html.MenuItem("Home","Index","Home")</li>
-                    <li>@Html.MenuItem("Blog", "Index","Blog")</li>
-                    <li>@Html.MenuItem("About","","About")</li>
-                </ul>
-            </nav>
-        </header>
-        <div id="main">
-            @RenderBody()
-            <div style="clear:both"></div>
-        </div>
-    </div>
-            <footer>
-            &copy; Thomas Shields | Site Design Inspired by <a href="http://nerdplusart.com">NerdPlusArt</a> | @Html.Partial("_LogOnPartial")
-            @if (Request.IsAuthenticated) { 
-            <text>| @Html.ActionLink("New Post","Create","Blog")</text>
-            }
-            | <a href="http://validator.w3.org/check?uri=@(Url.Encode("http://" + Request.Url.Host + Request.Url.AbsolutePath))">Valid HTML5</a> | <a href="http://validator.w3.org/check?uri=@(Url.Encode(Request.Url.AbsoluteUri))">Valid CSS3</a>
-        </footer>
+<nav>
+<ul id="nav">
+<li>@Html.MenuItem("Home","Index","Home")</li>
+<li>@Html.MenuItem("Blog", "Index","Blog")</li>
+<li>@Html.MenuItem("About","","About")</li>
+</ul>
+</nav>
+</header>
+<div id="main">
+@RenderBody()
+<div style="clear:both"></div>
+</div>
+</div>
+<footer>
+&copy; Thomas Shields | Site Design Inspired by <a href="http://nerdplusart.com">NerdPlusArt</a> | @Html.Partial("_LogOnPartial")
+@if (Request.IsAuthenticated) { 
+<text>| @Html.ActionLink("New Post","Create","Blog")</text>
+}
+| <a href="http://validator.w3.org/check?uri=@(Url.Encode("http://" + Request.Url.Host + Request.Url.AbsolutePath))">Valid HTML5</a> | <a href="http://validator.w3.org/check?uri=@(Url.Encode(Request.Url.AbsoluteUri))">Valid CSS3</a>
+</footer>
 
 </body>
 </html>

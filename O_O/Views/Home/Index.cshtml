@@ -1,7 +1,7 @@
 ﻿@{
-    ViewBag.Title = "Home";
-    string[] titles = { "World Wide Web", "Internet", "Interweb", "Intersphere", "Intertubes", "Interblag", "Blogosphere", "Blagonet", "Blagosphere", "Blagoblag", "Webnet", "Webweb" };
-    List<O_O.Models.post> latest = ViewBag.latest;
+ViewBag.Title = "Home";
+string[] titles = { "World Wide Web", "Internet", "Interweb", "Intersphere", "Intertubes", "Interblag", "Blogosphere", "Blagonet", "Blagosphere", "Blagoblag", "Webnet", "Webweb" };
+List<O_O.Models.post> latest = ViewBag.latest;
 }
 
 <div id="blockWrapper">
@@ -13,10 +13,10 @@ I'm Thomas Shields, Redeemed &amp; Reformed Christian and avid Coder &amp; Desig
 <div class="block">
 <h3>Latest</h3>
 <ol>
-    @foreach (O_O.Models.post p in latest)
-    {
-    <li><a href="@Url.Content("/Blog/Post/" + p.id)">@p.title</a><span class="latest-post-date">@(DateStuff.getTimeSpan(p.date))</span></li>
-    }
+@foreach (O_O.Models.post p in latest)
+{
+<li><a href="@Url.Content("/Blog/Post/" + p.id)">@p.title</a><span class="latest-post-date">@(DateStuff.getTimeSpan(p.date))</span></li>
+}
 </ol>
 
 </div>
