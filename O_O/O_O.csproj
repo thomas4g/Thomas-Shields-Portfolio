@@ -127,6 +127,7 @@
     <Content Include="Content\IE.css" />
     <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Images\rss.png" />
+    <Content Include="Content\Images\sprites.jpg" />
     <Content Include="Content\mobile.css" />
     <Content Include="Content\Images\calendar.png" />
     <Content Include="Content\Images\code.png" />

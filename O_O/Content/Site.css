@@ -118,6 +118,7 @@ margin:0;
 position:relative;
 padding: 10px 10px 50px 10px;
 z-index:1;
+clear:both;
 }
 body > footer {
 color:#fff;

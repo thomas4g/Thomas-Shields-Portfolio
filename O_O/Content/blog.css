@@ -10,22 +10,28 @@ section h2{font-size:45px;text-shadow:#fff 0 0 1px;display:block;margin-top:5px;
 .day{line-height:30px;font-size:30px;display:block;padding-bottom:1px;}
 .month{font-size:14px;text-shadow:none;border-radius:5px 5px 0 0;padding:0 1px 0 1px;background-color:#930;display:block;}
 .year{display:none;}
-.comments{width:100%;height:40px;color:#222;text-shadow:none;text-align:center;padding-top:10px;background-image:url("../Content/images/comments.png");background-repeat:no-repeat;font-size:20px;}
+.comments{width:100%;height:40px;color:#222;text-shadow:none;text-align:center;padding-top:10px;font-size:20px;background-position:-50px;}
 .comments a{width:100%;color:#222}
 .comments-text{display:none;}
-.tag-image{width:50px;height:50px;}
+.tag-img{height:50px;width:50px;display:block;}
+.tag-code{background-position:0 0;}
+.tag-design{background-position:-100px 0;}
+.tag-info{background-position:-180px 0;}
+.tag-theology{background-position:-290px 0;}
 .tag-name{display:none;}
 a.next{float:right;}
 a.previous{float:left;}
 #comments{margin-left:80px;margin-top:40px;}
 .addComment{margin:20px 40px 0 40px;text-align:left;}
 .comment-container{margin:20px 130px 0 0;border-bottom:1px dotted #ccc;}
+.sprites{background-image:url("/content/images/sprites.jpg");background-repeat:no-repeat;}
 #icons{text-align:left;padding:0;margin:0;}
 #icons li{display:block;height:39px;margin-bottom:5px;position:relative;z-index:1;}
-#icons li > a{margin-right:10px;font-size:14px;color:#444;}
-#icons li > a img{width:30px;vertical-align:bottom;margin-right:5px;}
-.rss-img{height:36px;}
-.so-img, .git-img{height:42px;}
+#icons li > a{display:inline-block;margin-right:10px;font-size:14px;color:#444;}
+#icons li > a span{display:inline-block;height:100%;background-color:#fff;margin-left:30px;padding:12px 0 0 5px;}
+.rss-img{height:36px;background-position:-230px 0;}
+.so-img{height:42px;background-position:-260px 0;}
+.git-img{height:42px;background-position:-150px 0;}
 #icons input{width:200px;}
 #icons div.dropdown{top:50px;display:none;border-radius:4px;text-align:center;position:absolute;right:5px;background-color:#fff;border:1px solid #ccc;width:210px;z-index:2;padding:5px;}
 #icons div.dropdown:after{content:"";position:absolute;top:-40px;border:20px solid transparent;border-bottom-color:#fff !important;left:90px;z-index:2;}
@@ -72,7 +78,7 @@ div.sidebar div.postDate, div.sidebar div.comments{text-shadow:none;width:auto;c
 div.sidebar div.comments a{color:#c30;}
 div.sidebar div.postDate span.month, div.sidebar div.postDate span.day, div.sidebar div.postDate span.year{background-color:transparent;padding:0;display:inline;font-size:15px;line-height:normal;font-family:Trebuchet MS;}
 div.sidebar div.comments .comments-text{display:inline;}
-div.sidebar img.tag-image{display:none;}
+div.sidebar .tag-img{display:inline;background-image:none;}
 div.sidebar span.tag-name{padding-left:5px;display:inline;}
 section.blogPost article{margin:0;font-size:20px;}
 section.blogPost h2{font-size:30px;text-shadow:none;}

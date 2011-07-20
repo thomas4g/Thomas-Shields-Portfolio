@@ -15,20 +15,16 @@ int pageSize = ViewBag.pageSize;
 <section id="right-sidebar">
 <ul id="icons">
 <li>
-<a href="http://@Request.Url.Host/Blog/RSS" class="clickit">
-<img class="rss-img" alt="rss" title="View My Rss Feed URL" src="@Url.Content("~/Content/Images/rss.png")" />
-<span>Subscribe</span>
-</a>
+<a href="http://@Request.Url.Host/Blog/RSS" class="clickit sprites rss-img">
+<span>Subscribe</span></a>
 <div class="rss dropdown">
 Copy the URL below into your RSS reader <br />
 <input value="http://@Request.Url.Host/Blog/RSS" />
 </div>
 </li>
 <li>
-<a href="http://stackoverflow.com/users/719312/thomas-shields" class="clickit Stack">
-<img class="so-img" src="@Url.Content("~/Content/Images/so.png")" alt="Stack Overflow Logo" title="View My Stack Overflow Activity" />
-<span>Stack Overflow</span>
-</a>
+<a href="http://stackoverflow.com/users/719312/thomas-shields" class="clickit sprites so-img">
+<span>Stack Overflow</span></a>
 <div class="dropdown">
 <div id="SOActivity"></div>
 <a href="http://stackoverflow.com/users/719312/thomas-shields">
@@ -37,8 +33,7 @@ Copy the URL below into your RSS reader <br />
 </div>
 </li>
 <li>
-<a href="https://github.com/thomas4g">
-<img class="git-img" src="@Url.Content("~/Content/Images/github.png")" alt="Github Logo" title="View My Projects on Github" />
+<a href="https://github.com/thomas4g" class="sprites git-img">
 <span>Github</span>
 </a>
 <div class="dropdown">
@@ -92,7 +87,7 @@ toggleDropDown(this, dropdown);
 return false;
 }
 });
-$(".Stack").click(function () {
+$(".so-img").click(function () {
 var el = document.getElementById("SOActivity");
 if (el.innerHTML === "") {
 $.get("../Blog/Stackoverflow", function (data) {
