@@ -14,9 +14,6 @@
 <![endif]-->
 
 <script type="text/javascript">
-//window.onresize = function (event) {
-//document.getElementById("dimensions").innerHTML = "X: " + window.innerWidth + "; Y: " + window.innerHeight;
-//}
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-23884364-1']);
 _gaq.push(['_trackPageview']);
@@ -33,16 +30,6 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 @RenderSection("head", false)
 </head>
 <body>
-<!--[if lt IE 7]>
-<div style='clear: both; left:20%;height: 59px; padding:0 0 0 15px; position: absolute;top:85px;margin:0 auto;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div>
-<![endif]-->
-<!--[if lt IE 9]>
-<noscript style="display:block; margin:0 auto; font-size:30px; color:red; background-color:#eee; position:absolute; top:0;">
-<div style="padding:5px;">
-Since you're using an old browser, scripting is required to display this website correctly. Please turn on JavaScript or unblock this website's scripts
-</div>
-</noscript>
-<![endif]-->
 
 <div id="page">
 <header>
@@ -66,8 +53,23 @@ Since you're using an old browser, scripting is required to display this website
 @if (Request.IsAuthenticated) { 
 <text>| @Html.ActionLink("New Post","Create","Blog")</text>
 }
-| <a href="http://validator.w3.org/check?uri=@(Url.Encode("http://" + Request.Url.Host + Request.Url.AbsolutePath))">Valid HTML5</a> | <a href="http://validator.w3.org/check?uri=@(Url.Encode(Request.Url.AbsoluteUri))">Valid CSS3</a>
+| <a href="http://validator.w3.org/check?uri=@(Url.Encode("http://" + Request.Url.Host + Request.Url.AbsolutePath))">Valid HTML5</a> | <a href="http://validator.w3.org/check?uri=@(Url.Encode("http://" + Request.Url.Host + Request.Url.AbsolutePath))">Valid CSS3</a>
 </footer>
+<!--[if lt IE 7]>
+<div style='width:100%;z-index:5;clear:both;left:0;height: 59px; padding:0 0 0 15px; position: absolute;top:0px;margin:0 auto;text-align:center;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div>
+<![endif]-->
+<!--[if IE 7]>
+<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home" style='z-index:5;clear: both; right:0; padding:5px 10px; text-decoration:underline; position: absolute;top:0px;background-color:#333;color:white;'>
+Consider Updating Your Browser
+</a>
+<![endif]-->
+<!--[if lt IE 9]>
+<noscript>
+<div style="z-index:6;width:100%;display:block;clear:both;margin:0 auto; font-size:30px; color:red; background-color:#eee; position:absolute; top:0;left:0;">
+Since you're using an old browser, scripting is required to display this website correctly. Please turn on JavaScript or unblock this website's scripts
+</div>
+</noscript>
+<![endif]-->
 
 </body>
 </html>
