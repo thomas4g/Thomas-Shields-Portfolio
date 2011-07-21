@@ -1,15 +1,59 @@
 ﻿@model IEnumerable<O_O.Models.post>
-
 @{
 ViewBag.Title = "Blog";
 int page = ViewBag.pageNum;
 int numPosts = ViewBag.numPosts;
 int pageSize = ViewBag.pageSize;
 }
-@section head {
+@section styles {
 <link rel="Stylesheet" href="@Url.Content("~/Content/sh_the.min.css")" type="text/css" />
 <link rel="Stylesheet" href="@Url.Content("~/Content/blog.css")" type="text/css"/>
+}
+@section scripts {
 <script type="text/javascript" src="@Url.Content("~/Scripts/sh_main.min.js")"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript">
+if (!Array.prototype.indexOf)
+{
+Array.prototype.indexOf = function(searchElement /*, fromIndex */)
+{
+"use strict";
+
+if (this === void 0 || this === null)
+throw new TypeError();
+
+var t = Object(this);
+var len = t.length >>> 0;
+if (len === 0)
+return -1;
+
+var n = 0;
+if (arguments.length > 0)
+{
+n = Number(arguments[1]);
+if (n !== n) // shortcut for verifying if it's NaN
+n = 0;
+else if (n !== 0 && n !== (1 / 0) && n !== -(1 / 0))
+n = (n > 0 || -1) * Math.floor(Math.abs(n));
+}
+
+if (n >= len)
+return -1;
+
+var k = n >= 0
+? n
+: Math.max(len - Math.abs(n), 0);
+
+for (; k < len; k++)
+{
+if (k in t && t[k] === searchElement)
+return k;
+}
+return -1;
+};
+}
+</script>
+<![endif]-->
 <script type="text/javascript">
 window.onload = function () {
 function getElementsByClassName(_class, tag) {
@@ -29,36 +73,39 @@ lis[j].style.zIndex = 1;
 }
 }
 for (i = 0; i < clickits.length; i++) {
-if (clickits[i].addEventListener) clickits[i].addEventListener("click", clickitEv, false);
-else clickits[i].attachEvent("onclick", clickitEv);
-function clickitEv(e) {
-if (window.innerWidth > 480) {
-var indx = clickits.indexOf(this), dropdown = dropdowns[indx], j = 0;
+if (clickits[i].addEventListener) clickits[i].addEventListener("click", clickitEv(i), false);
+else clickits[i].attachEvent("onclick", clickitEv(i));
+function clickitEv(index) {
+return function (e) {
+e = e || window.event;
+if (window.innerWidth > 480 || document.documentElement.clientWidth > 480) {
+var dropdown = dropdowns[index], j = 0;
 var hide = dropdown.style.display == "block";
 for (; j < dropdowns.length; j++) {
 dropdowns[j].style.display = "none";
 lis[j].style.zIndex = 1;
 }
 if (hide === true) {
-this.title = this.title.replace("Hide", "View");
-lis[indx].style.zIndex = 1;
+lis[index].style.zIndex = 1;
 dropdown.style.display = "none";
 }
 else {
-this.title = this.title.replace("View", "Hide");
-lis[indx].style.zIndex = 2;
+lis[index].style.zIndex = 2;
 dropdown.style.display = "block";
 }
 if (e.stopPropagation) e.stopPropagation();
-if (e.cancelBubble) e.cancelBubble();
+/*if (e.cancelBubble !== undefined)*/ e.cancelBubble = true;
 if (e.preventDefault) e.preventDefault();
-if (e.returnValue) e.returnValue = false;
+/*if (e.returnValue !== undefined)*/ e.returnValue = false;
 return false;
 }
 };
+};
 dropdowns[i].onclick = function (e) {
+e = e || window.event;
 if (e.stopPropagation) e.stopPropagation();
 if (e.cancelBubble) e.cancelBubble();
+return false;
 }
 };
 var soclick = getElementsByClassName("so-img", "a")[0];
@@ -84,7 +131,7 @@ sh_highlightDocument('../../Scripts/', '.min.js');
 <section id="right-sidebar">
 <ul id="icons">
 <li>
-<a href="http://@Request.Url.Host/Blog/RSS" class="clickit sprites rss-img">
+<a href="http://@Request.Url.Host/Blog/RSS" class="clickit sprites rss-img" title="View My RSS Feed">
 <span>Subscribe</span></a>
 <div class="rss dropdown">
 Copy the URL below into your RSS reader <br />
@@ -92,7 +139,7 @@ Copy the URL below into your RSS reader <br />
 </div>
 </li>
 <li>
-<a href="http://stackoverflow.com/users/719312/thomas-shields" class="clickit sprites so-img">
+<a href="http://stackoverflow.com/users/719312/thomas-shields" class="clickit sprites so-img" title="View My Stackoverflow Activity">
 <span>Stack Overflow</span></a>
 <div class="dropdown">
 <div id="SOActivity"></div>
@@ -108,17 +155,14 @@ Copy the URL below into your RSS reader <br />
 <div class="dropdown">
 </div>
 </li>
-
 </ul>
 </section>
-
 <section id="posts">
 @foreach (var item in Model)
 {
 @Html.Partial("Post", item);
 }
 </section>
-
 @if(page > 1) {
 @(Html.ActionLink("« Previous", "Index", new { page = page - 1 }, new { @class = "previous" }))
 }
