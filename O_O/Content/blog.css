@@ -41,7 +41,7 @@ a.previous{float:left;}
 .so-flair{max-width:208px;}
 code{font-family:Consolas, "Courier New", "Courier", Serif;background-color:#eee;padding:1px 2px;color:#222;}
 code.full{display:block;margin:4px;}
-pre{margin-left:15px;background-color:#eee;max-height:400px;}
+pre{margin-left:15px;background-color:#eee;max-height:400px;overflow:auto;border:1px solid #444;}
 article{font-family:"Segoe UI", Calibri, "Lucida Sans-Serif";color:#444;}
 .container{border-radius:10px;border:1px solid #888;padding:20px;}
 blockquote.comment{margin:20px 100px 0 0;padding-right:20px;font-family:"Segoe UI", Calibri, Sans-Serif;}
