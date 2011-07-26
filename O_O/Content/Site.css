@@ -54,8 +54,8 @@ h1 img
 height:110px;
 padding:10px 5px 0 5px;
 }
-h2, h3, nav, .description {
-font-family:"Courier New", Courier, monospace;
+h2, h3 {
+font-family:Consolas, monospace;
 }
 h3 {
 text-shadow: #fff 0 0 1px;
