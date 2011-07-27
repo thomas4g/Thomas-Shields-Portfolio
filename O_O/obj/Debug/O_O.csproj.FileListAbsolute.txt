@@ -9,3 +9,5 @@ C:\Users\Thomas\Desktop\O_O\O_O\O_O\bin\Newtonsoft.Json.xml
 C:\Users\Thomas\Desktop\O_O\O_O\O_O\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Thomas\Desktop\O_O\O_O\O_O\obj\Debug\O_O.dll
 C:\Users\Thomas\Desktop\O_O\O_O\O_O\obj\Debug\O_O.pdb
+C:\Users\Thomas\Desktop\O_O\O_O\O_O\bin\EntityFramework.xml
+C:\Users\Thomas\Desktop\O_O\O_O\O_O\bin\WebActivator.pdb
