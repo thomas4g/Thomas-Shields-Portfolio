@@ -27,6 +27,7 @@ img
 {
 border:none;
 max-width:100%;
+height:auto;
 }
 header, nav, section, article, footer{
 display:block;
@@ -51,6 +52,7 @@ padding:0;
 }
 h1 img 
 {
+width:auto;
 height:110px;
 padding:10px 5px 0 5px;
 }
