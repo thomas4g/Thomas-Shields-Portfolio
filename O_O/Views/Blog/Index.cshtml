@@ -6,11 +6,11 @@ int numPosts = ViewBag.numPosts;
 int pageSize = ViewBag.pageSize;
 }
 @section styles {
+<link rel="Stylesheet" href="@Url.Content("~/Scripts/google-code-prettify/prettify.css")" type="text/css"/>
 <link rel="Stylesheet" href="@Url.Content("~/Content/blog.css")" type="text/css"/>
 }
 @section scripts {
-<script type="text/javascript" src="@Url.Content("~/Scripts/syntaxhighlighter_3.0.83/scripts/shCore.js")"></script>
-<script type="text/javascript" src="@Url.Content("~/Scripts/syntaxhighlighter_3.0.83/scripts/shBrushXML.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/google-code-prettify/prettify.js")"></script>
 <!--[if lt IE 9]>
 <script type="text/javascript">
 if (!Array.prototype.indexOf)
@@ -124,7 +124,7 @@ return -1;
                 activity.send(null);
             }
         }
-                //sh_highlightDocument('../../Scripts/', '.min.js');
+        prettyPrint();
     };
 </script>
 }
@@ -170,6 +170,3 @@ Copy the URL below into your RSS reader <br />
 { 
 @Html.ActionLink("Next »", "Index", new { page = page + 1 }, new { @class = "next" })
 }
-<script type="text/javascript">
-    SyntaxHighlighter.all();
-</script>
