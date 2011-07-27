@@ -6,7 +6,6 @@ int numPosts = ViewBag.numPosts;
 int pageSize = ViewBag.pageSize;
 }
 @section styles {
-<link rel="Stylesheet" href="@Url.Content("~/Scripts/google-code-prettify/prettify.css")" type="text/css"/>
 <link rel="Stylesheet" href="@Url.Content("~/Content/blog.css")" type="text/css"/>
 }
 @section scripts {
@@ -55,77 +54,77 @@ return -1;
 </script>
 <![endif]-->
 <script type="text/javascript">
-    window.onload = function () {
-        function getElementsByClassName(_class, tag) {
-            var els = [], tags = document.getElementsByTagName(tag), i = 0;
-            for (; i < tags.length; i++) {
-                if (tags[i].className.split(" ").indexOf(_class) !== -1) { els.push(tags[i]); }
-            }
-            return els;
-        }
-        var clickits = getElementsByClassName("clickit", "a");
-        var dropdowns = getElementsByClassName("dropdown", "div");
-        var lis = document.getElementById("icons").getElementsByTagName("li");
-        document.onclick = function () {
-            var j = 0; for (; j < dropdowns.length; j++) {
-                dropdowns[j].style.display = "none";
-                lis[j].style.zIndex = 1;
-            }
-        }
-        for (i = 0; i < clickits.length; i++) {
-            if (clickits[i].addEventListener) clickits[i].addEventListener("click", clickitEv(i), false);
-            else clickits[i].attachEvent("onclick", clickitEv(i));
-            function clickitEv(index) {
-                return function (e) {
-                    e = e || window.event;
-                    if (window.innerWidth > 480 || document.documentElement.clientWidth > 480) {
-                        var dropdown = dropdowns[index], j = 0;
-                        var hide = dropdown.style.display == "block";
-                        for (; j < dropdowns.length; j++) {
-                            dropdowns[j].style.display = "none";
-                            lis[j].style.zIndex = 1;
-                        }
-                        if (hide === true) {
-                            lis[index].style.zIndex = 1;
-                            dropdown.style.display = "none";
-                        }
-                        else {
-                            lis[index].style.zIndex = 2;
-                            dropdown.style.display = "block";
-                        }
-                        if (e.stopPropagation) e.stopPropagation();
-                        /*if (e.cancelBubble !== undefined)*/e.cancelBubble = true;
-                        if (e.preventDefault) e.preventDefault();
-                        /*if (e.returnValue !== undefined)*/e.returnValue = false;
-                        return false;
-                    }
-                };
-            };
-            dropdowns[i].onclick = function (e) {
-                e = e || window.event;
-                if (e.stopPropagation) e.stopPropagation();
-                if (e.cancelBubble) e.cancelBubble();
-                return false;
-            }
-        };
-        var soclick = getElementsByClassName("so-img", "a")[0];
-        if (soclick.addEventListener) soclick.addEventListener("click", loadSO, false);
-        else soclick.attachEvent("onclick", loadSO)
-        function loadSO() {
-            var el = document.getElementById("SOActivity");
-            if (el.innerHTML === "") {
-                var activity = new XMLHttpRequest();
-                activity.onreadystatechange = function () {
-                    if (activity.readyState == 4) {
-                        el.innerHTML = activity.responseText;
-                    }
-                };
-                activity.open("GET", "/Blog/StackOverflow", true);
-                activity.send(null);
-            }
-        }
-        prettyPrint();
-    };
+window.onload = function () {
+function getElementsByClassName(_class, tag) {
+var els = [], tags = document.getElementsByTagName(tag), i = 0;
+for (; i < tags.length; i++) {
+if (tags[i].className.split(" ").indexOf(_class) !== -1) { els.push(tags[i]); }
+}
+return els;
+}
+var clickits = getElementsByClassName("clickit", "a");
+var dropdowns = getElementsByClassName("dropdown", "div");
+var lis = document.getElementById("icons").getElementsByTagName("li");
+document.onclick = function () {
+var j = 0; for (; j < dropdowns.length; j++) {
+dropdowns[j].style.display = "none";
+lis[j].style.zIndex = 1;
+}
+}
+for (i = 0; i < clickits.length; i++) {
+if (clickits[i].addEventListener) clickits[i].addEventListener("click", clickitEv(i), false);
+else clickits[i].attachEvent("onclick", clickitEv(i));
+function clickitEv(index) {
+return function (e) {
+e = e || window.event;
+if (window.innerWidth > 480 || document.documentElement.clientWidth > 480) {
+var dropdown = dropdowns[index], j = 0;
+var hide = dropdown.style.display == "block";
+for (; j < dropdowns.length; j++) {
+dropdowns[j].style.display = "none";
+lis[j].style.zIndex = 1;
+}
+if (hide === true) {
+lis[index].style.zIndex = 1;
+dropdown.style.display = "none";
+}
+else {
+lis[index].style.zIndex = 2;
+dropdown.style.display = "block";
+}
+if (e.stopPropagation) e.stopPropagation();
+/*if (e.cancelBubble !== undefined)*/e.cancelBubble = true;
+if (e.preventDefault) e.preventDefault();
+/*if (e.returnValue !== undefined)*/e.returnValue = false;
+return false;
+}
+};
+};
+dropdowns[i].onclick = function (e) {
+e = e || window.event;
+if (e.stopPropagation) e.stopPropagation();
+if (e.cancelBubble) e.cancelBubble();
+return false;
+}
+};
+var soclick = getElementsByClassName("so-img", "a")[0];
+if (soclick.addEventListener) soclick.addEventListener("click", loadSO, false);
+else soclick.attachEvent("onclick", loadSO)
+function loadSO() {
+var el = document.getElementById("SOActivity");
+if (el.innerHTML === "") {
+var activity = new XMLHttpRequest();
+activity.onreadystatechange = function () {
+if (activity.readyState == 4) {
+el.innerHTML = activity.responseText;
+}
+};
+activity.open("GET", "/Blog/StackOverflow", true);
+activity.send(null);
+}
+}
+prettyPrint();
+};
 </script>
 }
 <section id="right-sidebar">
