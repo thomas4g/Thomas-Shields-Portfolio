@@ -23,27 +23,15 @@ margin:10px 0 0 0;
 padding-right:20px;
 font-family: Impact, Charcoal, Sans-Serif;
 }
-.latest-post-date 
+#latest-posts li{position:relative;}
+.latest-post-link{display:block;}
+.latest-post-date, .latest-post-comments{color:#999;font-size:13px;text-indent:10px;}
+.latest-post-comments{color:#444;}
+@@media screen and (max-width:560px)
 {
-display:block;
-color:#999;
-font-size:13px;
-text-indent:10px;
-}
-@@media screen and (max-width:560px) 
-{
-.block 
-{
-font-size:19px;
-margin:0;
-}
-.latest-post-date { font-size:15px;}
-}
-#blockWrapper 
-{
-text-align:center;
-margin: 20px 10px 50px 10px;
-}
+.block{font-size:19px;margin:0;}
+.latest-post-date, .latest-post-comments{font-size:15px;}}
+#blockWrapper{text-align:center;margin: 20px 10px 50px 10px;}
 </style>
 }
 <div id="blockWrapper">
@@ -54,13 +42,12 @@ I'm Thomas Shields, Redeemed &amp; Reformed Christian and avid Coder &amp; Desig
 
 <div class="block">
 <h3>Latest</h3>
-<ol>
+<ol id="latest-posts">
 @foreach (O_O.Models.post p in latest)
 {
-<li><a href="@Url.Content("/Blog/Post/" + p.id)">@p.title</a><span class="latest-post-date">@(DateStuff.getTimeSpan(p.date))</span></li>
+<li><a class="latest-post-link" href="@Url.Content("/Blog/Post/" + p.id)">@p.title</a><span class="latest-post-date">@(DateStuff.getTimeSpan(p.date)), </span><a class="latest-post-comments" href="@Url.Action("Post","Blog",new {id = p.id})#comments">@(p.comments.Count) comments</a></li>
 }
 </ol>
-
 </div>
 <div class="block">
 <h3>Updates</h3>
@@ -68,11 +55,10 @@ Just finished a logo. What do you think? I've added some blocks here on the home
 </div> 
 <div class="block">
 <h3>Code</h3>
-I wrote my first code at 14, but in two years I went from thinking passwords could be stored in JS files to using JavaScript, HTML, CSS, and ASP.NET to write powerful web applications. I love logic, I love code, and I love writing Object-Oriented, scalable systems. 
-</div>
+I like code. Writing code to make a computer do what I want. I like to code mostly to fuel my design (HTML, CSS), but I also like systems. I like organization and I like Object-Oriented structure to make an application <em>work</em> (JavaScript, C#)</div>
 <div class="block">
 <h3>Design</h3>
-Let's get one thing straight: I am <em>not</em> an artist. But I love to design - anything from treehouses to future homes to websites, I love taking a good idea and making it real.  HTML, CSS, and JavaScript are music to my ears, and I revel in making beautiful designs with clean markup. 
+Art isn't all paints and pencils; there's a fundamental aspect to it: design. I like hand-crafting beautiful designs; aesthetics are an all-pervasive and wonderful thing and I love injecting beauty into web design.
 </div>
 <div class="block">
 <h3>Theology</h3>

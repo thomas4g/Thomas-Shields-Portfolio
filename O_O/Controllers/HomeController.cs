@@ -13,7 +13,18 @@ namespace O_O.Controllers
         {
             ViewBag.Message = "Welcome to O_O";
             PostContext db = new PostContext();
-            ViewBag.latest = (from p in db.posts orderby p.date descending select p).Take(4).ToList();
+            var _posts = (from p in db.posts
+                          orderby p.date descending
+                          select new { p.id, p.title, p.content, p.date, p.tag, comments = (from c in db.comments where c.post == p.id select c) });
+            int numPosts = _posts.Count();
+            _posts = _posts.Take(4);
+            var posts = new List<post>();
+            foreach (var item in _posts)
+            {
+                posts.Add(new post(item.id, item.title, item.content, item.date, item.tag, item.comments.ToList()));
+            }
+
+            ViewBag.latest = posts;
             return View();
         }
 
