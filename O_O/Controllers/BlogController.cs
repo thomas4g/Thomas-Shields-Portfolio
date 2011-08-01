@@ -97,6 +97,34 @@ namespace O_O.Controllers
             return View("Details",p2);
         }
         //
+        // POST: /Blog/Details/5  ~ for creating a comment
+        [HttpPost]
+        [ValidateInput(true)]
+        public ActionResult Post(int id, comment c)
+        {
+            c.date = DateTime.Now;
+            if (ModelState.IsValid)
+            {
+                db.comments.Add(c);
+                db.SaveChanges();
+                return RedirectToAction("Post", new { id = c.post });
+            }
+            else
+            {
+                ViewBag.newcomment = c;
+                var post = (from p in db.posts
+                            where p.id == id
+                            select new { p.id, p.title, p.content, p.date, p.tag, comments = (from co in db.comments where co.post == id select co) }).SingleOrDefault();
+
+                if (post == null)
+                {
+                    return View("404");
+                }
+                post p2 = new post(post.id, post.title, post.content, post.date, post.tag, post.comments.ToList());
+                return View("Details", p2);
+            }
+        }
+        //
         // GET: /Blog/Create
         [Authorize]
         public ActionResult Create()

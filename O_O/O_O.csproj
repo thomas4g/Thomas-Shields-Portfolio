@@ -620,6 +620,7 @@
     <Content Include="Views\Blog\StackOverflow.cshtml" />
     <Content Include="Views\Quotes\Create.cshtml" />
     <Content Include="Views\Quotes\Index.cshtml" />
+    <Content Include="Views\Blog\Blog_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

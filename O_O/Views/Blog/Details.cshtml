@@ -1,7 +1,13 @@
 ﻿@model O_O.Models.post
 
 @{
-O_O.Models.comment com = new O_O.Models.comment();
+O_O.Models.comment com;
+if(ViewBag.newcomment != null) {
+com = ViewBag.newcomment;
+}
+else {
+ com = new O_O.Models.comment();
+}
 com.post = Model.id;
 ViewBag.Title = Model.title;
 }
@@ -21,10 +27,12 @@ ViewBag.Title = Model.title;
 <div id="comments">
 @foreach (var item in Model.comments)
 {
-    
 <blockquote class="comment">
 @item.content
-<footer @if(item.email!=null) { <text>style="background-image:url('http://gravatar.com/avatar/@O_O.Content.MD5HashToString.StringToHashToString(item.email.Trim().ToLower())?s=40&d=mm')"</text> }>
+<footer @if(item.email==null) {
+            item.email = "";
+}
+style="background-image:url('http://gravatar.com/avatar/@O_O.Content.MD5HashToString.StringToHashToString(item.email.Trim().ToLower())?s=40&d=mm&r=g')">
 @if (item.website != null)
 {
 <a class="comment-author" href="http://@item.website.Replace("https://","").Replace("http://","")">
