@@ -1,8 +1,8 @@
 ﻿h2{font-weight:normal;}
 h2 a{color:#444;}
-section#posts{margin:10px 150px 0 0px;}
-section.blogPost{padding-left:10px;overflow:hidden;}
-section.blogPost article{margin-left:50px;padding-left:15px;}
+{margin:10px 150px 0 0px;}
+.blogPost{padding-left:10px;overflow:hidden;}
+.blogPost article{margin-left:50px;padding-left:15px;}
 #right-sidebar{width:150px;float:right;margin-top:60px;margin-right:-10px;}
 section h2{font-size:45px;text-shadow:#fff 0 0 1px;display:block;margin-top:5px;margin-bottom:15px;}
 .sidebar{float:left;width:4%;min-width:50px;max-width:50px;}
@@ -50,9 +50,10 @@ blockquote footer{position:static;margin:5px 0 0 0;color:#000;background-repeat:
 .comment-author{font-size:14px;}
 .comment-date{display:block;color:#555;}
 blockquote footer:before{}
-@media screen and (max-width:1045px){section.blogPost h2{font-size:30px;}}
-@media screen and (max-width:1120px){section#right-sidebar{width:40px;}
-section#posts{margin-right:50px;}
+@media screen and (max-width:1045px){.blogPost h2{font-size:30px;}}
+@media screen and (max-width:1120px){#right-sidebar{width:30px;margin-right:0;}
+#posts{margin-right:50px;}
+#icons li > a{width:30px;}
 #icons li > a span{display:none;}
 #icons div.dropdown:after{left:176px;}
 #icons div.dropdown:before{left:175px;}}
@@ -65,7 +66,7 @@ section#posts{margin-right:50px;}
 section#posts{margin:5px 5px 0 5px;}
 #main{padding:0;}
 blockquote{margin-right:5px;}
-#right-sidebar{top:auto;bottom:35px;right:10px;}
+#right-sidebar{top:auto;bottom:35px;right:10px;width:auto;}
 section.blogPost h2{font-size:25px;}}
 @media screen and (max-width:480px){section.blogPost{margin:0;}
 div.sidebar{display:block;float:none;width:auto;min-width:0;max-width:100%;}

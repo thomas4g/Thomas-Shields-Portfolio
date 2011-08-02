@@ -247,8 +247,14 @@ margin:0 auto;
 width:100%;
 margin:0;
 border:none;
-}  
-    
+}     
+}
+@media screen and (max-width:560px) 
+{
+body > footer
+{
+margin-top:0;
+}
 }
 @media screen and (max-width:480px) 
 {
