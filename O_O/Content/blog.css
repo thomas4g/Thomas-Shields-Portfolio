@@ -4,7 +4,7 @@ h2 a{color:#444;}
 .blogPost{padding-left:10px;overflow:hidden;}
 .blogPost article{margin-left:50px;padding-left:15px;}
 #right-sidebar{width:150px;float:right;margin-top:60px;margin-right:-10px;}
-section h2{font-size:45px;text-shadow:#fff 0 0 1px;display:block;margin-top:5px;margin-bottom:15px;}
+section h2{font-size:45px;text-shadow:#444 0 1px 1px, #444 0 -1px 1px;display:block;margin-top:5px;margin-bottom:15px;}
 .sidebar{float:left;width:4%;min-width:50px;max-width:50px;}
 .postDate{text-shadow:#ccc 0 0 1px;width:100%;background-repeat:no-repeat;font-size:30px;color:white;text-align:center;margin-bottom:4px;background-color:#ccc;border-radius:5px;font-family:"Century Gothic", Arial;}
 .day{line-height:30px;font-size:30px;display:block;padding-bottom:1px;}
