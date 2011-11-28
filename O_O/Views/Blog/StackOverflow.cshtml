@@ -1,0 +1,26 @@
+﻿@model List<Stacky.UserEvent>
+<style type="text/css">
+div.stackItem 
+{
+    font-family:"Segoe UI", "Calibri", "Verdana", "Trebuchet MS";
+    color:#666;
+    margin-bottom:7px;
+}
+div.stackDate 
+{
+    font-size:12px;
+    color:#aaa;
+}
+</style>
+@foreach (var item in Model) {
+HtmlString text = O_O.Content.GetStackOverflowItemText.GetText(item);
+if (text.ToHtmlString() != "")
+{ 
+<text>
+<div class="stackItem">
+@(text)
+<div class="stackDate" title="@item.CreationDate.ToLocalTime()">@(DateStuff.getTimeSpan(item.CreationDate.ToLocalTime()))</div>
+</div>
+</text>
+}
+}

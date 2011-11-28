@@ -1,0 +1,77 @@
+﻿@using O_O.Content.Extensions;
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="description" content="The personal blog of Thomas Shields with code snippets, design wrangling, and theological essays" />
+<meta name="keywords" content="Web Design, Web Developement, Design, Development, OOP, HTML, CSS, JavaScript, HTML5, CSS3, Theology, Essays" />
+<meta name="author" content="Thomas Shields" />
+<meta name="viewport" content="width=device-width" />
+<title>@ViewBag.Title | Thomas Shields Web Design</title>
+<link rel="shortcut icon" href="@Url.Content("/favicon.ico")"/>
+<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+<!--[if lt IE 8]>
+<link href="@Url.Content("~/Content/IE.css")" rel="stylesheet" type="text/css"/>
+<![endif]-->
+@RenderSection("styles", false)
+
+
+<script src="@Url.Content("~/Scripts/modernizr-1.7.min.js")" type="text/javascript"></script>
+@RenderSection("scripts", false)
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-23884364-1']);
+_gaq.push(['_trackPageview']);
+
+(function () {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</head>
+<body>
+
+<div id="page">
+<header>
+<h1><img src="@Url.Content("~/Content/Images/logo.png")" alt="Thomas Shields Web Design: Personal Weblog" /></h1>
+
+<nav>
+<ul id="nav">
+<li>@Html.MenuItem("Home","Index","Home")</li>
+<li>@Html.MenuItem("Blog", "Index","Blog")</li>
+<li>@Html.MenuItem("About","","About")</li>
+</ul>
+</nav>
+</header>
+<div id="main">
+@RenderBody()
+<div style="clear:both"></div>
+</div>
+</div>
+<footer>
+&copy; Thomas Shields | Site Design Inspired by <a href="http://nerdplusart.com">NerdPlusArt</a> | @Html.Partial("_LogOnPartial")
+@if (Request.IsAuthenticated) { 
+<text>| @Html.ActionLink("New Post","Create","Blog")</text>
+}
+| <a href="http://validator.w3.org/check?uri=@(Url.Encode("http://" + Request.Url.Host + Request.Url.AbsolutePath))">Valid HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/validator?uri=@(Url.Encode("http://" + Request.Url.Host + Request.Url.AbsolutePath) + "&profile=css3")">Valid CSS3</a>
+</footer>
+<!--[if lt IE 7]>
+<div style='width:100%;z-index:5;clear:both;left:0;height: 59px; padding:0 0 0 15px; position: absolute;top:0px;margin:0 auto;text-align:center;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div>
+<![endif]-->
+<!--[if IE 7]>
+<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home" style='z-index:5;clear: both; right:0; padding:5px 10px; text-decoration:underline; position: absolute;top:0px;background-color:#333;color:white;'>
+Consider Updating Your Browser
+</a>
+<![endif]-->
+<!--[if lt IE 9]>
+<noscript>
+<div style="z-index:6;width:100%;display:block;clear:both;margin:0 auto; font-size:30px; color:red; background-color:#eee; position:absolute; top:0;left:0;">
+Since you're using an old browser, scripting is required to display this website correctly. Please turn on JavaScript or unblock this website's scripts
+</div>
+</noscript>
+<![endif]-->
+
+</body>
+</html>
