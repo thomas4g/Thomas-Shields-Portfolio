@@ -1,0 +1,7 @@
+C:\Users\Thomas\Desktop\thomasshields\Thomas Shields Portfolio\bin\Thomas Shields Portfolio.dll
+C:\Users\Thomas\Desktop\thomasshields\Thomas Shields Portfolio\bin\Thomas Shields Portfolio.pdb
+C:\Users\Thomas\Desktop\thomasshields\Thomas Shields Portfolio\bin\EntityFramework.dll
+C:\Users\Thomas\Desktop\thomasshields\Thomas Shields Portfolio\bin\EntityFramework.xml
+C:\Users\Thomas\Desktop\thomasshields\Thomas Shields Portfolio\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Thomas\Desktop\thomasshields\Thomas Shields Portfolio\obj\Debug\Thomas Shields Portfolio.dll
+C:\Users\Thomas\Desktop\thomasshields\Thomas Shields Portfolio\obj\Debug\Thomas Shields Portfolio.pdb
