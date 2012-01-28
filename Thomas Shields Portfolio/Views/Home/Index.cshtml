@@ -44,6 +44,14 @@
 <div>
 <img src="Content/Images/build.png" alt="construction cone" />
 <span class="construction">Under Construction</span></h1>
+In the meantime, try reading some of my (soon to be updated list of) articles:
+<ul>
+    @foreach (var item in ViewBag.docs)
+	{
+		<li><a href="Content/Articles/@item">@item</a></li>
+	}
+    
+</ul>
 </div>
 </body>
 </html>
