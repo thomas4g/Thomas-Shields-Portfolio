@@ -13,7 +13,7 @@ namespace Thomas_Shields_Portfolio.Controllers
             ViewBag.Message = "Welcome to ASP.NET MVC!";
             List<string> docs = new List<string>();
             
-            foreach (var item in Directory.GetFiles(Server.MapPath("/articles")))
+            foreach (var item in Directory.GetFiles(Server.MapPath("Content/articles")))
             {
                 docs.Add(item.Replace('\\','/').Split('/').Last());
             }
