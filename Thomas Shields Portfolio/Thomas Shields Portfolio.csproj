@@ -148,6 +148,44 @@
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\articles\Alexander the Great.docx" />
+    <None Include="Content\articles\Bannockburns.docx" />
+    <None Include="Content\articles\Calculus Journal Entry 9-27.docx" />
+    <None Include="Content\articles\City of God Paper.docx" />
+    <None Include="Content\articles\croesus-solon happiness.docx" />
+    <None Include="Content\articles\Divine Comedy Confirmation.docx" />
+    <None Include="Content\articles\Divine Comedy Refutation.docx" />
+    <None Include="Content\articles\Drive Us To Distraction.docx" />
+    <None Include="Content\articles\Fear.docx" />
+    <None Include="Content\articles\Habit.docx" />
+    <None Include="Content\articles\Iliad Paper %281%29.doc" />
+    <None Include="Content\articles\Mark 16 Thomas Shields Paper 4 Omnibus IV Section C.docx" />
+    <None Include="Content\articles\Math Journal - Inverse Functions.docx" />
+    <None Include="Content\articles\Math Journal - Problem 147.docx" />
+    <None Include="Content\articles\Math Journal 1.docx" />
+    <None Include="Content\articles\Math Journal 2.docx" />
+    <None Include="Content\articles\NT Wright.docx" />
+    <None Include="Content\articles\Omni IV Secondary Paper 1.docx" />
+    <None Include="Content\articles\Omnibus IV Secondary Paper 2.docx" />
+    <None Include="Content\articles\Paper 1.docx" />
+    <None Include="Content\articles\Paper 2.doc" />
+    <None Include="Content\articles\Paper 2.docx" />
+    <None Include="Content\articles\Paper 3.docx" />
+    <None Include="Content\articles\Paper 4.docx" />
+    <None Include="Content\articles\profitofpain.docx" />
+    <None Include="Content\articles\Reading Pagan Books - Expository Essay.docx" />
+    <None Include="Content\articles\Sam Gamgee True Friend Expository Essay.docx" />
+    <None Include="Content\articles\Television Invective.docx" />
+    <None Include="Content\articles\The Lord%27s Day.docx" />
+    <None Include="Content\articles\The Prince.docx" />
+    <None Include="Content\articles\The Sacrifice at Thermopylae by Thomas Shields.docx" />
+    <None Include="Content\articles\Theorem 3.1 Proof.docx" />
+    <None Include="Content\articles\Thomas Becket Confirmation.docx" />
+    <None Include="Content\articles\Thomas Becket Refutation.docx" />
+    <None Include="Content\articles\Thomas Becket.docx" />
+    <None Include="Content\articles\Traitor Commonplace.docx" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
