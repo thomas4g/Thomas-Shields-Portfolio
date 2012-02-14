@@ -4,11 +4,12 @@
 			<h1 class="title"><a href="/article/@Model.id">@Model.title</a></h1>
 			<span class="pubdate">@Model.date.ToShortDateString()</span>
 			<span class="author">@Model.author</span>
-			<span class="likes">
+			
 			@if (User.Identity.IsAuthenticated)
 			   {
 				<a class="edit" href="/articles/edit/@Model.id">Edit</a>
 			   }
+			   <span class="likes">
 			@if (Request.Cookies["stars" + Model.id] != null)
    { 
 				<span class="star">▲</span>
