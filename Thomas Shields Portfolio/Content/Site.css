@@ -53,7 +53,11 @@ overflow:auto;
 text-align:center;
 font-family:Georgia;
 font-size:1.5em;
-margin:10px 0;
+margin:20px 0 10px 0;
+}
+.post footer 
+{
+	margin:10px 0;
 }
 .pubdate, .author, .tags li, .edit 
 {
@@ -137,4 +141,11 @@ text-align:center;
 	overflow:hidden;
 	white-space:nowrap;
 	color:inherit;
+}
+.ftnt 
+{
+	color:Black;
+	font-size:.8em;
+	text-decoration:none;
+	display:block;
 }
