@@ -1,57 +1,9 @@
-﻿@{
-    Layout = "";
+﻿@model IEnumerable<Thomas_Shields_Portfolio.Models.article>
+<p class="welcome">Welcome to my portfolio of writing and web design. Below are recent writings of mine. I am a reformed, evangelical Christian in the PCA. I'm still working on this and there are only 2 articles up right now (2 that I happened to have on hand) but I'll be updating often and quickly, so please check back. </p>
+@foreach (var item in Model) { 
+	@Html.Partial("article", item);
+
 }
-<!DOCTYPE html />
-<html>
-<head>
-<title>Thomas Shields Design &amp; Essay Portfolio</title>
-<style>
-    h1 
-    {
-        width:500px;
-        margin:0 auto;
-        text-align:center;
-        margin-top:100px;
-        font-family:Georgia, serif;
-    }
-    h1 img 
-    {
-        vertical-align:middle;
-    }
-    .logo 
-    {
-        display:block;
-        margin:0 0 20px 0;
-    }
-    .construction 
-    {
-        padding:3px 6px;
-        background-color:orange;
-        border-radius:5px;
-        color:white;
-                text-shadow:0 0 1px white;
-
-    }
-    div 
-    {
-        margin-left:-35px;
-    }
-</style>
-</head>
-<body>
-<h1>
-<img src="Content/Images/portfologo.png" class="logo" alt="Thomas Shields Design & Essay Portfolio"/>
-<div>
-<img src="Content/Images/build.png" alt="construction cone" />
-<span class="construction">Under Construction</span></h1>
-In the meantime, try reading some of my (soon to be updated list of) articles:
-<ul>
-
-     @foreach (var item in ViewBag.docs)
-	{
-		<li><a href="Content/articles/@item">@item</a></li>
-	}   
-</ul>
-</div>
-</body>
-</html>
+@if (User.Identity.IsAuthenticated) { 
+<a href="/articles/create" class="new">New Article</a>
+}

@@ -1,0 +1,20 @@
+﻿@model Thomas_Shields_Portfolio.Models.article
+	<article class="post">
+		<header>
+			<h1 class="title"><a href="/article/@Model.id">@Model.title</a></h1>
+			<span class="pubdate">@Model.date.ToShortDateString()</span>
+			<span class="author">@Model.author</span>
+			@if (User.Identity.IsAuthenticated)
+			   {
+				<a class="edit" href="/articles/edit/@Model.id">Edit</a>
+			   }
+			</header>
+			@Html.Raw(@Model.content)
+			<footer>
+				<ul class="tags">
+				@foreach (var t in Model.tags.Split(','))
+	{
+					<li>@t</li>
+	}
+				</ul></footer>
+	</article>

@@ -63,16 +63,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ArticlesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\article.cs" />
+    <Compile Include="Models\ArticleContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Images\build.png" />
+    <Content Include="Content\Images\me.png" />
     <Content Include="Content\Images\portfologo.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -149,42 +152,22 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\articles\Alexander the Great.docx" />
-    <Content Include="Content\articles\Bannockburns.docx" />
-    <Content Include="Content\articles\Calculus Journal Entry 9-27.docx" />
-    <Content Include="Content\articles\City of God Paper.docx" />
-    <Content Include="Content\articles\croesus-solon happiness.docx" />
-    <Content Include="Content\articles\Divine Comedy Confirmation.docx" />
-    <Content Include="Content\articles\Divine Comedy Refutation.docx" />
-    <Content Include="Content\articles\Drive Us To Distraction.docx" />
-    <Content Include="Content\articles\Fear.docx" />
-    <Content Include="Content\articles\Habit.docx" />
-    <Content Include="Content\articles\Iliad Paper %281%29.doc" />
-    <Content Include="Content\articles\Mark 16 Thomas Shields Paper 4 Omnibus IV Section C.docx" />
-    <Content Include="Content\articles\Math Journal - Inverse Functions.docx" />
-    <Content Include="Content\articles\Math Journal - Problem 147.docx" />
-    <Content Include="Content\articles\Math Journal 1.docx" />
-    <Content Include="Content\articles\Math Journal 2.docx" />
-    <Content Include="Content\articles\NT Wright.docx" />
-    <Content Include="Content\articles\Omni IV Secondary Paper 1.docx" />
-    <Content Include="Content\articles\Omnibus IV Secondary Paper 2.docx" />
-    <Content Include="Content\articles\Paper 1.docx" />
-    <Content Include="Content\articles\Paper 2.doc" />
-    <Content Include="Content\articles\Paper 2.docx" />
-    <Content Include="Content\articles\Paper 3.docx" />
-    <Content Include="Content\articles\Paper 4.docx" />
-    <Content Include="Content\articles\profitofpain.docx" />
-    <Content Include="Content\articles\Reading Pagan Books - Expository Essay.docx" />
-    <Content Include="Content\articles\Sam Gamgee True Friend Expository Essay.docx" />
-    <Content Include="Content\articles\Television Invective.docx" />
-    <Content Include="Content\articles\The Lord%27s Day.docx" />
-    <Content Include="Content\articles\The Prince.docx" />
-    <Content Include="Content\articles\The Sacrifice at Thermopylae by Thomas Shields.docx" />
-    <Content Include="Content\articles\Theorem 3.1 Proof.docx" />
-    <Content Include="Content\articles\Thomas Becket Confirmation.docx" />
-    <Content Include="Content\articles\Thomas Becket Refutation.docx" />
-    <Content Include="Content\articles\Thomas Becket.docx" />
-    <Content Include="Content\articles\Traitor Commonplace.docx" />
+    <Content Include="Views\Articles\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Articles\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Articles\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Articles\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\article.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Web.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
