@@ -20,15 +20,18 @@ namespace Thomas_Shields_Portfolio.Models
 		[Required]
 		public string author { get; set; }
 		[Required]
+		public int stars { get; set; }
+		[Required]
 		public string tags { get; set; } //comma delimited
 		public article() { }
-		public article(int _id, string _title, string _content, DateTime _date, string _author, string _tags)
+		public article(int _id, string _title, string _content, DateTime _date, string _author, int _stars, string _tags)
 		{
 			id = _id;
 			title = _title;
 			content = _content;
 			date = _date;
 			author = _author;
+			stars = _stars;
 			tags = _tags;
 		}
 	}

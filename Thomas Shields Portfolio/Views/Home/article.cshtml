@@ -4,10 +4,19 @@
 			<h1 class="title"><a href="/article/@Model.id">@Model.title</a></h1>
 			<span class="pubdate">@Model.date.ToShortDateString()</span>
 			<span class="author">@Model.author</span>
+			<span class="likes">
 			@if (User.Identity.IsAuthenticated)
 			   {
 				<a class="edit" href="/articles/edit/@Model.id">Edit</a>
 			   }
+			@if (Request.Cookies["stars" + Model.id] != null)
+   { 
+				<span class="star">▲</span>
+   }
+   else { 
+				<a href="/articles/star/@Model.id" class="star" title="This is cool">▲</a>
+   }
+   @Model.stars</span>
 			</header>
 			@Html.Raw(@Model.content)
 			<footer>

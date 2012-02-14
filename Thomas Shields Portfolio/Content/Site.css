@@ -21,7 +21,7 @@ text-decoration:none;
 background-color:black;
 color:white;
 padding:5px 10px;
-font-family:serif;
+font-family:Times New Roman, Times, Serif;
 font-size:1.5em;
 font-style:italic;
 text-transform:lowercase;
@@ -128,4 +128,13 @@ text-align:center;
 .title a:hover 
 {
 	border-bottom:1px dashed black;
+}
+.likes {top: 3px; position:relative; font-size:1.5em; color:#999}
+.likes:hover {color:Black;}
+.star , .starred
+{
+	text-decoration:none;
+	overflow:hidden;
+	white-space:nowrap;
+	color:inherit;
 }

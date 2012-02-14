@@ -44,6 +44,7 @@ namespace Thomas_Shields_Portfolio.Controllers
 		[HttpPost]
 		public ActionResult Create(article article)
 		{
+			article.stars = 0;
 			if (ModelState.IsValid)
 			{
 				db.articles.Add(article);
@@ -98,7 +99,19 @@ namespace Thomas_Shields_Portfolio.Controllers
 			db.SaveChanges();
 			return RedirectToAction("Index");
 		}
+		public ActionResult Star(int id)
+		{
+			if (Request.Cookies["stars" + id] == null)
+			{
+				article article = db.articles.Find(id);
+				article.stars += 1;
+				db.Entry(article).State = EntityState.Modified;
+				db.SaveChanges();
+				Response.Cookies["stars" + id].Value = "starred";
+			}
+			return RedirectToAction("article", "home", new { id = id });
 
+		}
 		protected override void Dispose(bool disposing)
 		{
 			db.Dispose();
